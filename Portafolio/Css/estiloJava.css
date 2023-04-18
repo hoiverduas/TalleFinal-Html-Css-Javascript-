@@ -1,0 +1,67 @@
+
+  
+  
+  
+  nav ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+  }
+  
+  nav li {
+	
+	display: inline-flex;
+  }
+
+  nav li:hover {
+	
+	background-color: black;
+  }
+  
+  nav a {
+	color: white;
+	text-decoration: none;
+	padding: 10px 25px;
+	width: 350px;
+  }
+
+  body {
+	background-color: #f2f2f2;
+  }
+ 
+  /* Estilos para las secciones */
+  section {
+	margin-top: 2rem;
+	margin: 60px;
+    display: flow-root;
+	align-items: center;
+  }
+  
+  section h2 {
+	font-size: 1.5rem;
+	margin-bottom: 1rem;
+  }
+  
+  section p {
+	margin-bottom: 0.5rem;
+  }
+
+  *{
+	padding: 0;
+	margin: 0;
+  }
+
+h1{
+	text-align: center;
+	background-color: black;
+	color: white;
+	padding: 20px;
+}
+
+nav ul {
+	background-color: #757575;
+	width: 100;
+	list-style: none;
+	text-align: center;
+  }

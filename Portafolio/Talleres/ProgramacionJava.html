@@ -1,0 +1,4843 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 user-scalable=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../Css/estiloProgrmacion1.css">
+    <title>Desarrollador Backend Jr</title>
+</head>
+
+<body>
+    <!-- SECCION I N I C I O -->
+    <section id="inicio">
+        <div class="contenido">
+            <header>
+                <div class="contenido-header">
+                    <h1>/Backend Jr/</h1>
+                    <nav id="nav" class="">
+                        <ul id="links">
+                            <li><a href="#inicio" class="seleccionado" onclick="seleccionar(this)">INICIO</a></li>
+                            <li><a href="#sobremi" onclick="seleccionar(this)">TEMA 1</a></li>
+                            <li><a href="#servicios" onclick="seleccionar(this)">TEMA 2</a></li>
+                            <li><a href="#portfolio" onclick="seleccionar(this)">TEMA 3</a></li>
+                            <li><a href="#contacto" onclick="seleccionar(this)">TEMA 4</a></li>
+                            <li><a href="Talleres.html" onclick="seleccionar(this)">TALLERES</a></li>
+                            <li><a href="galeriaMultimedia.html" onclick="seleccionar(this)">VIDEOS</a></li>
+                            
+                        </ul>
+                        </ul>
+                    </nav>
+
+                    <!-- Icono del menu responsive -->
+                    <div id="icono-nav" onclick="responsiveMenu()">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+
+
+                    <div class="redes">
+                        <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                        <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+                    </div>
+                </div>
+            </header>
+            <div class="presentacion">
+                <p class="bienvenida">Bienvenidos</p>
+                <h2>Tema 1: Taller de variables e impresión</h2>
+                <h2>Tema 2:Taller de condicionales</h2>
+                <h2>Tema 3:Taller de ciclos</h2>
+                <h2>Tema 4:Taller de Arreglos</h2>
+                <p class="descripcion"></p>
+                <a href="../portafolio.html">Ir a Portafolio</a>
+            </div>
+        </div>
+    </section>
+     <!-- SECCION S O B R E M I -->
+     <section id="sobremi">
+       
+        <div class="sobremi">
+            
+            <h2> Punto 1</h2>
+           
+            <h3>Clase</h3>
+            <pre>
+		<code>
+			public class NombreApellido {
+
+                private String nombre;
+                private String apellidoPaterno;
+                private String apellidoMaterno;
+            
+                public  NombreApellido(String nombre, String apellidoPaterno, String apellidoMaterno) {
+                    this.nombre = nombre;
+                    this.apellidoPaterno = apellidoPaterno;
+                    this.apellidoMaterno = apellidoMaterno;
+            
+                }
+                public String imprimirNombreCompleto() {
+                    return nombre + " " + apellidoPaterno + " " + apellidoMaterno;
+                }
+            }
+            
+		</code>
+        
+        
+          <h3>Main</h3>
+            <code>
+			import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese su nombre: ");
+        String nombre = scanner.nextLine();
+
+        System.out.print("Ingrese su apellido paterno: ");
+        String apellidoPaterno = scanner.nextLine();
+
+        System.out.print("Ingrese su apellido materno: ");
+        String apellidoMaterno = scanner.nextLine();
+
+        NombreApellido NombreApellido = new NombreApellido(nombre, apellidoPaterno, apellidoMaterno);
+
+        System.out.println("Hola, " + NombreApellido.imprimirNombreCompleto() + "!");
+        
+    }
+}
+		</code>
+	</pre>
+    <h2>Punto 2</h2>
+           
+    <h3>Clase</h3>
+    <pre>
+<code>
+    public class DatosPersonales {
+
+
+        private String nombre;
+
+        private String apellidos;
+
+
+        private int edad;
+
+        private Double estatura;
+
+
+    public DatosPersonales(String nombre, String apellidos, int edad, Double estatura) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.edad = edad;
+        this.estatura = estatura;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public Double getEstatura() {
+        return estatura;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+}
+    
+</code>
+
+<h3>Main</h3>
+    <code>
+    
+        import java.util.Scanner;
+
+        public class Main {
+            public static void main(String[] args) {
+        
+        
+        
+        
+                    Scanner sc = new Scanner(System.in);
+        
+        
+                    System.out.print("Ingrese su nombre: ");
+                    String nombre = sc.nextLine();
+        
+                    System.out.print("Ingrese sus apellidos: ");
+                    String apellidos = sc.nextLine();
+        
+                    System.out.print("Ingrese su edad: ");
+                    int edad = sc.nextInt();
+        
+                    System.out.print("Ingrese su estatura (en metros): ");
+                    double estatura = sc.nextDouble();
+        
+                    DatosPersonales DatosPersonales = new DatosPersonales(nombre, apellidos, edad, estatura);
+        
+                    System.out.println("Su nombre completo es: " + DatosPersonales.getNombre() + " " + DatosPersonales.getNombre());
+                    System.out.println("Su edad es: " + DatosPersonales.getEdad() + " años");
+                    System.out.println("Su estatura es: " + DatosPersonales.getEstatura() + " metros");
+                }
+        
+        
+        
+            }
+</code>
+</pre>
+    
+        <h2>Punto 3</h2>
+           
+            <h3>Clase</h3>
+    <pre>
+<code>
+    public class DatosFamiliares {
+
+        private String nombre;
+    
+        private String apellidos;
+    
+        private String nombreMadre;
+    
+        private String apellidosMadre;
+    
+        private String nombrePadre;
+    
+        private String apellidosPadre;
+    
+        public DatosFamiliares(String nombre, String apellidos, String nombreMadre, String apellidosMadre, String nombrePadre, String apellidosPadre) {
+            this.nombre = nombre;
+            this.apellidos = apellidos;
+            this.nombreMadre = nombreMadre;
+            this.apellidosMadre = apellidosMadre;
+            this.nombrePadre = nombrePadre;
+            this.apellidosPadre = apellidosPadre;
+        }
+    
+        public String getNombre() {
+            return nombre;
+        }
+    
+        public String getApellidos() {
+            return apellidos;
+        }
+    
+        public String getNombreMadre() {
+            return nombreMadre;
+        }
+    
+        public String getApellidosMadre() {
+            return apellidosMadre;
+        }
+    
+        public String getNombrePadre() {
+            return nombrePadre;
+        }
+    
+        public String getApellidosPadre() {
+            return apellidosPadre;
+        }
+    }
+    
+</code>
+
+
+<h3>Main</h3>
+    <code>
+        import java.util.Scanner;
+
+        public class Main {
+            public static void main(String[] args) {
+        
+        
+                Scanner sc = new Scanner(System.in);
+        
+        
+                System.out.print("Ingrese su nombre: ");
+                String nombre = sc.nextLine();
+        
+                System.out.print("Ingrese sus apellidos: ");
+                String apellidos = sc.nextLine();
+        
+                System.out.print("Ingrese nombre su padre: ");
+                String nombrePadre = sc.nextLine();
+        
+                System.out.print("Ingrese apellidos de su padre: ");
+                String apellidosPadre = sc.nextLine();
+        
+                System.out.print("Ingrese nombre su Madre: ");
+                String nombreMadre = sc.nextLine();
+        
+                System.out.print("Ingrese apellidos de su Madre: ");
+                String apellidosMadre = sc.nextLine();
+        
+                DatosFamiliares DatosFamiliares = new DatosFamiliares(nombre,apellidos,nombreMadre,apellidosMadre,nombrePadre,apellidosPadre);
+        
+                System.out.println("Yo  " + DatosFamiliares.getNombre() + " " + DatosFamiliares.getNombre() + ", soy hijo de "+ DatosFamiliares.getNombreMadre() + " " + DatosFamiliares.getApellidosMadre() + " y " + DatosFamiliares.getNombrePadre() + " " + DatosFamiliares.getApellidosPadre());
+        
+            }
+        
+        
+        
+        }
+
+</code>
+</pre>
+        
+        <h2>Punto 4</h2>
+           
+            <h3>Clase</h3>
+    <pre>
+<code>
+    import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+
+        System.out.print("Ingrese el nombre de su ciudad: ");
+        String ciudad = sc.nextLine();
+
+        System.out.print("Ingrese nombre de su pais: ");
+        String pais = sc.nextLine();
+
+
+
+        PaisCiudad PaisCiudad = new PaisCiudad(ciudad,pais);
+
+        System.out.println("La ciudad " + PaisCiudad.getCiudad() + ", es la capital del país " + PaisCiudad.getPais() );
+
+
+
+
+    }
+}
+    
+</code>
+
+
+<h3>Main</h3>
+    <code>
+        public class PaisCiudad {
+
+            private String ciudad;
+        
+            private String pais;
+        
+            public PaisCiudad(String ciudad, String pais) {
+                this.ciudad = ciudad;
+                this.pais = pais;
+            }
+        
+            public String getCiudad() {
+                return ciudad;
+            }
+        
+            public String getPais() {
+                return pais;
+            }
+        }
+        
+
+</code>
+</pre>
+        
+        <h2>Punto 5</h2>
+           
+            <h3>Clase</h3>
+           
+    
+    <pre>
+<code>
+    public class Mascota {
+
+        private String nombreCompleto ;
+    
+        private String nombreMascota ;
+    
+        private String tipo ;
+    
+        private int edad ;
+    
+    
+        public Mascota(String nombreCompleto, String nombreMascota, String tipo, int edad) {
+            this.nombreCompleto = nombreCompleto;
+            this.nombreMascota = nombreMascota;
+            this.tipo = tipo;
+            this.edad = edad;
+        }
+    
+        public String getNombreCompleto() {
+            return nombreCompleto;
+        }
+    
+        public String getNombreMascota() {
+            return nombreMascota;
+        }
+    
+        public String getTipo() {
+            return tipo;
+        }
+    
+        public int getEdad() {
+            return edad;
+        }
+    }
+    
+</code>
+
+<h3>Main</h3>
+    <code>
+        import java.util.Scanner;
+
+        public class Main {
+            public static void main(String[] args) {
+        
+        
+                Scanner sc = new Scanner(System.in);
+        
+        
+                System.out.print("Ingrese su nombre completo: ");
+                String nombreCompleto = sc.nextLine();
+        
+                System.out.print("Ingrese nombre de su mascota: ");
+                String nombreMascota = sc.nextLine();
+        
+                System.out.print("Tipo de Mascota: ");
+                String tipo = sc.nextLine();
+        
+                System.out.print("Ingrese la edad su mascota : ");
+                int edad = sc.nextInt();
+        
+        
+        
+                Mascota Mascota = new Mascota(nombreCompleto, nombreMascota, tipo,edad);
+        
+                System.out.println(Mascota.getNombreMascota() + "es un(a)" + Mascota.getTipo()+ ", el cual, tiene "+ Mascota.getEdad() + "años de edad y " + Mascota.getNombreCompleto()+"es actualmente su dueño(a)." );
+        
+        
+        
+            }
+        }
+
+                </code>
+         </pre>
+
+        </div>
+    </section>
+
+    <!-- SECCION S E R V I C I O S -->
+    <section id="servicios">
+        <div class="servicios">
+        <h2>Punto 1</h2>
+           
+        <h3>Clase</h3>
+       
+
+          <pre>
+              <code>
+                public class MayorEdad {
+
+                    private  int edad ;
+                
+                
+                    public int getEdad() {
+                        return edad;
+                    }
+                
+                    public void setEdad(int edad) {
+                        this.edad = edad;
+                    }
+                    public void esMayor(){
+                        if (this.edad >= 18){
+                            System.out.println("Usted es mayor de edad : " + edad);
+                        }
+                        else {
+                            System.out.println("Usted es menor de edad : " + edad);
+                        }
+                    }
+                
+                }
+                
+             </code>
+         </pre>
+
+
+        <h3>Main</h3>
+         <pre>
+              <code>
+                import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        MayorEdad MayorEdad = new MayorEdad();
+        System.out.println("Ingrese su edad :");
+        int edad = sc.nextInt();
+
+        MayorEdad.setEdad(edad);
+        MayorEdad.esMayor()
+
+
+    }
+}
+
+              </code>
+        </pre>
+
+        
+        <h2>Punto 2</h2>
+           
+        <h3>Clases</h3>
+       
+
+          <pre>
+              <code>
+                public class MenorEdad {
+
+                    private  int edad ;
+                
+                    public int getEdad() {
+                        return edad;
+                    }
+                
+                    public void setEdad(int edad) {
+                        this.edad = edad;
+                    }
+                    public void esMenor(){
+                        if (this.edad >= 18){
+                            System.out.println("Usted es mayor de edad : " + edad);
+                        }
+                        else {
+                            System.out.println("Usted es menor de edad : " + edad);
+                        }
+                    }
+                }
+                
+                
+             </code>
+         </pre>
+
+
+        <h3>Main</h3>
+         <pre>
+              <code>
+                import java.util.Scanner;
+
+                public class Main {
+                    public static void main(String[] args) {
+                
+                        Scanner sc = new Scanner(System.in);
+                        MenorEdad MayorEdad = new MenorEdad();
+                        System.out.println("Ingrese su edad :");
+                        int edad = sc.nextInt();
+                
+                        MayorEdad.setEdad(edad);
+                        MayorEdad.esMenor();
+                
+                
+                
+                    }
+                }
+
+              </code>
+        </pre>
+
+        <h2>Punto 3</h2>
+           
+        <h3>Clase</h3>
+       
+
+          <pre>
+              <code>
+                public class EntradaFiesta {
+
+                    private  String nombreCompleto;
+                    private int edad;
+                
+                    public EntradaFiesta(String nombreCompleto, int edad) {
+                        this.nombreCompleto = nombreCompleto;
+                        this.edad = edad;
+                    }
+                
+                    public String getNombreCompleto() {
+                        return nombreCompleto;
+                    }
+                
+                    public void setNombreCompleto(String nombreCompleto) {
+                        this.nombreCompleto = nombreCompleto;
+                    }
+                
+                    public int getEdad() {
+                        return edad;
+                    }
+                
+                    public void setEdad(int edad) {
+                        this.edad = edad;
+                    }
+                
+                    public  void bienvenidoFiesta(){
+                
+                        if (this.edad >= 18){
+                            System.out.println(nombreCompleto + " usted es mayor de edad, por lo tanto puede entrar a la fiesta " );
+                        }
+                        else {
+                            System.out.println(nombreCompleto + " usted es menor de edad, por lo tanto, no puede entrar a la fiesta, por favor devuélvase a su casa " );
+                        }
+                        System.out.print("\033[H\033[2J");
+                        System.out.flush();
+                    }
+                }
+                
+             </code>
+         </pre>
+
+
+        <h3>Main</h3>
+         <pre>
+              <code>
+                import java.util.Scanner;
+
+                public class Main {
+                    public static void main(String[] args) {
+                
+                        Scanner sc = new Scanner(System.in);
+                        System.out.println("Ingrese su nombre completo :");
+                        String nombreCompleto = sc.nextLine();
+                        System.out.println("Ingrese su edad :");
+                        int edad = sc.nextInt();
+                        EntradaFiesta EntradaFiesta = new EntradaFiesta(nombreCompleto,edad);
+                
+                        EntradaFiesta.setEdad(edad);
+                        EntradaFiesta.setNombreCompleto(nombreCompleto);
+                        EntradaFiesta.bienvenidoFiesta();
+                
+                
+                
+                    }
+                }
+
+              </code>
+        </pre>
+
+
+        <h2>Punto 4</h2>
+           
+        <h3>Clase</h3>
+       
+
+          <pre>
+              <code>
+import repository.RepositoryMovie;
+import repository.RepositoryRegister;
+import service.VideoStoreService;
+
+public class App {
+
+    void initialApplication(){
+
+        RepositoryRegister repositoryRegister = new RepositoryRegister();
+        RepositoryMovie repositoryMovie = new RepositoryMovie();
+        VideoStoreService videoStoreService = new VideoStoreService(repositoryRegister, repositoryMovie);
+        videoStoreService.initVideoStoreService();
+
+    }
+}
+
+                
+             </code>
+         </pre>
+
+
+         <h3>Servicio</h3>
+       
+
+         <pre>
+             <code>
+                package service;
+
+                import entity.*;
+                import repository.IRepositoryMovie;
+                import repository.IRepositoryRegister;
+                import repository.RepositoryMovie;
+                
+                import java.util.List;
+                import java.util.Scanner;
+                
+                public class VideoStoreService {
+                
+                                private  final IRepositoryRegister repositoryRegister;
+                                private  final IRepositoryMovie repositoryMovie;
+                
+                    public VideoStoreService(IRepositoryRegister repositoryRegister, IRepositoryMovie repositoryMovie) {
+                        this.repositoryRegister = repositoryRegister;
+                        this.repositoryMovie = repositoryMovie;
+                    }
+                
+                
+                    public void initVideoStoreService(){
+                        boolean exits = false;
+                
+                        while(!exits){
+                
+                            System.out.println("////////////////////////////////////");
+                            System.out.println("////////- INPUT OPTIONS - //////////");
+                            System.out.println("////////////////////////////////////");
+                            System.out.println("   Option #1: register user");
+                            System.out.println("   Option #2: rent movie");
+                            System.out.println("   Option #3: receive movie");
+                            System.out.println("   Option #4: Salir menu");
+                            System.out.println("////////////////////////////////////");
+                
+                
+                            Scanner sn = new Scanner(System.in);
+                            System.out.print("Entry a option: ");
+                            int option = sn.nextInt();
+                
+                            switch (option){
+                                case 1:
+                                    registerMovie();
+                                    break;
+                                case 2:
+                                    rentMovie();
+                                    break;
+                                case 3:
+                                    receiveMovie();
+                                    break;
+                                case 4:
+                                    exits = true;
+                                    break;
+                                default:
+                                    System.out.println("No escogiste ninguna opción de (1-4).");
+                                    break;
+                
+                            }
+                
+                        }
+                    }
+                        private void registerMovie(){
+                
+                            Scanner scanner = new Scanner(System.in);
+                            System.out.print("ingrese nombre completo del usuario : ");
+                            String userName = scanner.nextLine();
+                            System.out.print("ingrese nombre de operador : ");
+                            String operadorUser = scanner.nextLine();
+                            System.out.print("ingresar Id del usuario: ");
+                            Integer registerID = scanner.nextInt();
+                
+                            Operator operator = new Operator(operadorUser);
+                            User user = new User(userName);
+                            Register register = new Register(user,operator,registerID);
+                            if (register != null) {
+                                repositoryRegister.save(register);
+                                System.out.println(register);
+                            }else {
+                                System.out.println("error al ingresar datos");
+                            }
+                        }
+                    private void rentMovie(){
+                
+                        System.out.println("Peliculas Disponibles");
+                        System.out.println(repositoryMovie.getByRefID("01"));
+                        System.out.println(repositoryMovie.getByRefID("02"));
+                        System.out.println(repositoryMovie.getByRefID("03"));
+                
+                
+                        Scanner scanner = new Scanner(System.in);
+                        List<Movie> movies = new java.util.ArrayList<>();
+                
+                        System.out.print("ingresar Id del usuario: ");
+                        Integer registerID = scanner.nextInt();
+                
+                        System.out.print("cuantas peliculas desea arquilar : ");
+                        int sizeTools = scanner.nextInt();
+                
+                        for (int i = 0; i < sizeTools; i++) {
+                            System.out.print("Entry ref# "+ (i+1) +" movie :");
+                            String refID = scanner.next();
+                            Movie movie = repositoryMovie.getByRefID(refID);
+                            if (movie != null) {
+                                movies.add(movie);
+                            } else {
+                                System.out.print("Pelicula no se encuentra disponible");
+                            }
+                
+                        }
+                        int totalPreice = movies.stream().mapToInt(Movie::getPrice).sum();
+                        MovieSale movieSale = new MovieSale(movies, totalPreice);
+                
+                        Register register = repositoryRegister.getByID(registerID);
+                
+                        if (register != null) {
+                            register.setMovieSale(movieSale);
+                            System.out.println(register);
+                        } else {
+                            System.out.println("Usuario no esta registrado ");
+                        }
+                    }
+                    private void receiveMovie(){
+                
+                        Scanner scanner = new Scanner(System.in);
+                
+                        System.out.print("ingresar Id del usuario: ");
+                        Integer registerID = scanner.nextInt();
+                
+                        System.out.print(" ingresar Observaciones: ");
+                        String  inputObservations = scanner.next();
+                
+                        Observations observations = new Observations(inputObservations);
+                
+                        Register register = repositoryRegister.getByID(registerID);
+                
+                
+                        if (register != null) {
+                            register.setObservations(observations);
+                            System.out.println(register);
+                        } else {
+                            System.out.println("Usuario no esta registrado ");
+                        }
+                
+                    }
+                
+                }
+               
+            </code>
+        </pre>
+
+
+
+
+         <h3>Entidades</h3>
+             
+
+         <pre>
+             <code>
+                package entity;
+
+                public class Movie {
+                
+                    private  String refID;
+                    private  String title;
+                    private String movieGenero;
+                    private Integer price;
+                
+                    public Movie(String refID, String title, String movieGenero, Integer price) {
+                        this.refID = refID;
+                        this.title = title;
+                        this.movieGenero = movieGenero;
+                        this.price = price;
+                    }
+                
+                    public Integer getPrice() {
+                        return price;
+                    }
+                
+                    @Override
+                    public String toString() {
+                        return "Movie{" +
+                                "refID='" + refID + '\'' +
+                                ", title='" + title + '\'' +
+                                ", movieGenero='" + movieGenero + '\'' +
+                                ", price=" + price +
+                                '}';
+                    }
+                
+                
+                }
+
+                package entity;
+
+import java.util.List;
+
+public class MovieSale {
+
+    private List<Movie> movies;
+    private int totalPrice;
+
+    public MovieSale(List<Movie> movies, int totalPrice) {
+        this.movies = movies;
+        this.totalPrice = totalPrice;
+    }
+
+    @Override
+    public String toString() {
+        return "MovieSale{" +
+                "movies=" + movies +
+                ", totalPrice=" + totalPrice +
+                '}';
+    }
+}
+package entity;
+
+public class Observations {
+
+    private String inputObservations;
+
+    public Observations(String inputObservations) {
+        this.inputObservations = inputObservations;
+    }
+
+    public String getInputObservations() {
+        return inputObservations;
+    }
+
+    public void setInputObservations(String inputObservations) {
+        this.inputObservations = inputObservations;
+    }
+
+    @Override
+    public String toString() {
+        return "Observations{" +
+                "inputObservations='" + inputObservations + '\'' +
+                '}';
+    }
+}
+package entity;
+
+public class Operator {
+
+    private String name;
+
+    public Operator(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Operator{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+}
+package entity;
+
+public class Register {
+
+    private User user;
+
+    private Operator opeador;
+    private Integer registerID;
+
+    private  MovieSale movieSale;
+
+    private Observations observations;
+
+    public Register(User user, Operator opeador, Integer registerID) {
+        this.user = user;
+        this.opeador = opeador;
+        this.registerID = registerID;
+    }
+
+    public Integer getRegisterID() {
+        return registerID;
+    }
+
+    public void setMovieSale(MovieSale movieSale) {
+        this.movieSale = movieSale;
+    }
+
+    public void setRegisterID(Integer registerID) {
+        this.registerID = registerID;
+    }
+
+    public Observations getObservations() {
+        return observations;
+    }
+
+    public void setObservations(Observations observations) {
+        this.observations = observations;
+    }
+
+    @Override
+    public String toString() {
+        return "Register{" +
+                "user=" + user +
+                ", opeador=" + opeador +
+                ", registerID=" + registerID +
+                ", movieSale=" + movieSale +
+                ", observations=" + observations +
+                '}';
+    }
+
+
+}
+package entity;
+
+public class User {
+
+    private String name;
+
+    public User(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+}
+
+               
+            </code>
+        </pre>
+
+         <h3>Repositorio</h3>
+       
+
+          <pre>
+              <code>
+                package repository;
+
+import entity.Movie;
+
+import java.util.Map;
+
+public interface IRepositoryMovie {
+
+    Movie getByRefID(String refID);
+
+}
+
+package repository;
+
+import entity.Movie;
+
+import java.util.Map;
+import java.util.Set;
+
+public class RepositoryMovie  implements IRepositoryMovie {
+
+    Map<String, Movie> moviesDB = Map.of(
+            "01", new Movie("01", "JOHN WICK", " Accion, Crimen, Suspenso",20000),
+            "02", new Movie("02", " EL EXORCISTA DEL PAPA", "Terror",50000),
+            "03", new Movie("03", " SHAZAM LA FURIA DE LOS DIOSES", "Fantastico. Comedia. Accion.",10000)
+    );
+
+
+
+
+    @Override
+    public Movie getByRefID(String refID) {
+        return moviesDB.get(refID);
+    }
+}
+
+
+package repository;
+
+import entity.Register;
+
+public interface IRepositoryRegister {
+
+    void save(Register register);
+    Register getByID(Integer id);
+}
+package repository;
+
+import entity.Register;
+
+import java.util.Map;
+
+public class RepositoryRegister implements IRepositoryRegister {
+
+    Map<Integer, Register> registersDB = new java.util.HashMap<>();
+
+
+    @Override
+    public void save(Register register) {
+        registersDB.put(register.getRegisterID(),register);
+    }
+    public Register getByID(Integer id){return registersDB.get(id);
+    }
+}
+
+                
+             </code>
+         </pre>
+
+
+
+
+
+
+        <h3>Main</h3>
+         <pre>
+              <code>
+             
+                import java.io.IOException;
+                import java.io.InterruptedIOException;
+                import java.util.ArrayList;
+                import java.util.Scanner;
+                
+                public class Main {
+                    public static void main(String[] args){
+                
+                        App app = new App();
+                        app.initialApplication();
+                
+                    }
+                
+                
+                }
+              </code>
+        </pre>
+        
+
+
+        <h2>Punto 5</h2>
+           
+        <h3>Clases</h3>
+            
+
+          <pre>
+              <code>
+                
+import repositoy.ProductsRepository;
+import repositoy.RegisterRepository;
+import service.DrugstoreService;
+
+public class App {
+    void initialApplication(){
+
+        RegisterRepository registerRepository = new RegisterRepository();
+        ProductsRepository productsRepository = new ProductsRepository();
+        DrugstoreService drugstoreService = new DrugstoreService(registerRepository, productsRepository);
+        drugstoreService.initDrugstoreService();
+
+    }
+}
+
+                
+             </code>
+         </pre>
+
+         <h3>Servicio</h3>
+       
+
+          <pre>
+              <code>
+                package service;
+
+import entity.*;
+import repositoy.IProductsRepository;
+import repositoy.IRegisterRepository;
+
+import java.util.List;
+import java.util.Scanner;
+
+public class DrugstoreService {
+
+    private final IRegisterRepository registerRepository;
+    private final IProductsRepository productsRepository;
+
+    public DrugstoreService(IRegisterRepository registerRepository, IProductsRepository productsRepository) {
+        this.registerRepository = registerRepository;
+        this.productsRepository = productsRepository;
+    }
+
+    public void initDrugstoreService(){
+        boolean exits = false;
+
+        while(!exits){
+
+            System.out.println("////////////////////////////////////");
+            System.out.println("////////- INPUT OPTIONS - //////////");
+            System.out.println("////////////////////////////////////");
+            System.out.println(" Option #1: buy products");
+            System.out.println(" Option #2: consult prices by product");
+            System.out.println(" Option #3: returns");
+            System.out.println(" Option #4: Salir menu");
+            System.out.println("////////////////////////////////////");
+
+
+            Scanner sn = new Scanner(System.in);
+            System.out.print("Entry a option: ");
+            int option = sn.nextInt();
+
+            switch (option){
+                case 1:
+                    buyProducts();
+                    break;
+                case 2:
+                    consultPricesProduct();
+                    break;
+                case 3:
+                    returns();
+                    break;
+                case 4:
+                    exits = true;
+                    break;
+                default:
+                    System.out.println("No escogiste ninguna opción de (1-4).");
+                    break;
+
+            }
+        }
+    }
+
+    private void buyProducts(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("ingrese nombre completo del usuario : ");
+        String userName = scanner.nextLine();
+        System.out.print("ingrese nombre de operador : ");
+        String operadorUser = scanner.nextLine();
+        System.out.print("ingresar Id del usuario: ");
+        Integer registerID = scanner.nextInt();
+
+        User user = new User(userName);
+        Operator operator = new Operator(operadorUser);
+        Register register = new Register(registerID, user, operator);
+        registerRepository.save(register);
+        System.out.println(register);
+
+    }
+
+    private void consultPricesProduct() {
+
+        System.out.println("  Peliculas Disponibles  ");
+        System.out.println(productsRepository.getByRefID("01"));
+        System.out.println(productsRepository.getByRefID("02"));
+        System.out.println(productsRepository.getByRefID("03"));
+        System.out.println(productsRepository.getByRefID("04"));
+        System.out.println(productsRepository.getByRefID("05"));
+        System.out.println("");
+
+
+        Scanner scanner = new Scanner(System.in);
+        List<Products> productss = new java.util.ArrayList<>();
+        System.out.print("ingresar Id del usuario: ");
+        Integer registerID = scanner.nextInt();
+        System.out.print("cuantos productos desea comprar : ");
+        int sizeTools = scanner.nextInt();
+        for (int i = 0; i < sizeTools; i++) {
+            System.out.print("Entry ref# "+(i+1)+ " product :");
+            String refID = scanner.next();
+            Products products = productsRepository.getByRefID(refID);
+            if (products != null) {
+                productss.add(products);
+            } else {
+                System.out.print("producto no se encuentra disponible");
+            }
+        }
+        int totalPreice = productss.stream().mapToInt(Products::getPrice).sum();
+        ProductSale productSale = new ProductSale( productss,totalPreice);
+        Register register = registerRepository.getByID(registerID);
+
+        if (register != null) {
+            register.setProductSale(productSale);
+            System.out.println(register);
+        } else {
+            System.out.println("Usuario no esta registrado ");
+        }
+    }
+
+    private void returns(){
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("ingresar Id del usuario: ");
+        Integer registerID = scanner.nextInt();
+        Register register = registerRepository.getByID(registerID);
+        if (register != null) {
+            registerRepository.remove(register);
+            System.out.println("Devolucion exitosa");
+            System.out.println(register);
+            System.out.println("");
+        } else {
+            System.out.println("usuario no se encuentra en la base de datos");
+
+        }
+
+
+
+    }
+}
+                
+             </code>
+         </pre>
+
+         <h3>Entidades</h3>
+       
+
+         <pre>
+             <code>
+                package entity;
+
+                public class Operator {
+                
+                    private String nameOperator;
+                
+                    public Operator(String nameOperator) {
+                        this.nameOperator = nameOperator;
+                    }
+                
+                    @Override
+                    public String toString() {
+                        return "Operator{" +
+                                "nameOperator='" + nameOperator + '\'' +
+                                '}';
+                    }
+                }
+                
+                package entity;
+
+import java.util.List;
+
+public class Products {
+
+
+    private  String refID;
+    private String producto;
+
+    private Integer price;
+
+    private Integer stock;
+
+    public Products(String refID, String producto, Integer price, Integer stock) {
+        this.refID = refID;
+        this.producto = producto;
+        this.price = price;
+        this.stock = stock;
+    }
+
+
+
+
+    public Integer getPrice() {
+        return price;
+    }
+
+    @Override
+    public String toString() {
+        return "Products{" +
+                "refID='" + refID + '\'' +
+                ", producto='" + producto + '\'' +
+                ", price=" + price +
+                ", stock=" + stock +
+                '}';
+    }
+}
+
+package entity;
+
+import java.util.List;
+
+public class ProductSale {
+
+    private List<Products>productss;
+    private int totalPrice;
+
+    public ProductSale(List<Products> productss, int totalPrice) {
+        this.productss = productss;
+        this.totalPrice = totalPrice;
+    }
+
+    @Override
+    public String toString() {
+        return "ProductSale{" +
+                "productss=" + productss +
+                ", totalPrice=" + totalPrice +
+                '}';
+    }
+}
+
+
+package entity;
+
+public class Register {
+
+    private Integer registerID;
+
+    private User user;
+
+    private Operator operator;
+
+    private ProductSale productSale;
+
+    public Register(Integer registerID, User user, Operator operator) {
+        this.registerID = registerID;
+        this.user = user;
+        this.operator = operator;
+    }
+
+
+    public Integer getRegisterID() {
+        return registerID;
+    }
+
+    public void setRegisterID(Integer registerID) {
+        this.registerID = registerID;
+    }
+
+    public void setProductSale(ProductSale productSale) {
+        this.productSale = productSale;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Register{" +
+                "registerID=" + registerID +
+                ", user=" + user +
+                ", operator=" + operator +
+                ", productSale=" + productSale +
+                '}';
+    }
+}
+
+
+
+package entity;
+
+public class User {
+
+    private String name;
+
+    public User(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+}
+
+
+
+
+
+
+               
+            </code>
+        </pre>
+        
+        <h3>Repositorio</h3>
+       
+
+        <pre>
+            <code>
+                package repositoy;
+
+                import entity.Products;
+                
+                public interface IProductsRepository {
+                    Products getByRefID(String refID);
+                }
+
+                package repositoy;
+
+import entity.Products;
+
+import java.util.Map;
+
+public class ProductsRepository implements IProductsRepository {
+
+    Map<String, Products> productssDB = Map.of(
+            "01", new Products("01","Paracetamol", 2000,50 ),
+            "02", new Products("02","Ibuprofeno", 2500, 40),
+            "03", new Products("03","Vitaminas", 3000, 30),
+            "04", new Products("04","Antiseptico", 5000, 20),
+            "05", new Products("05","Amoxicilina", 1500, 10)
+    );
+
+
+
+
+    @Override
+    public Products getByRefID(String refID) {
+        return productssDB.get(refID);
+    }
+}
+
+
+package repositoy;
+
+import entity.Register;
+
+public interface IRegisterRepository {
+
+    void save(Register register);
+    Register getByID(Integer id);
+    void remove(Register register);
+}
+
+              
+package repositoy;
+
+import entity.Register;
+
+import java.util.Map;
+
+public class RegisterRepository implements IRegisterRepository {
+    Map<Integer, Register> registersDB = new java.util.HashMap<>();
+
+
+    @Override
+    public void save(Register register) {
+        registersDB.put(register.getRegisterID(),register);
+    }
+    public Register getByID(Integer id){return registersDB.get(id);}
+    public void remove(Register register) {
+        registersDB.remove(register.getRegisterID(),register);
+    }
+}
+
+
+
+
+           </code>
+       </pre>
+
+        <h3>Main</h3>
+         <pre>
+              <code>
+                import java.util.Scanner;
+
+                public class Main {
+                    public static void main(String[] args) {
+                
+                        App app = new App();
+                        app.initialApplication();
+                
+                
+                    }
+                }
+
+              </code>
+        </pre>
+
+
+
+        <h2>Punto 6</h2>
+           
+        <h3>Clases</h3>
+       
+
+          <pre>
+              <code>
+                
+                import repository.RegisterRepository;
+import repository.ToolRepository;
+import service.WorkShopService;
+
+public class App {
+
+    void initialApplication(){
+
+        ToolRepository toolRepository = new ToolRepository();
+        RegisterRepository registerRepository = new RegisterRepository();
+
+        WorkShopService workShopService = new WorkShopService(toolRepository, registerRepository);
+
+        workShopService.initWorkShop();
+
+    }
+}
+
+             </code>
+         </pre>
+
+         <h3>Servicio</h3>
+       
+
+          <pre>
+              <code>
+                package service;
+
+
+import entity.*;
+import repository.IRegisterRepository;
+import repository.IToolRepository;
+
+import java.util.List;
+import java.util.Scanner;
+public class WorkShopService {
+
+    private final IToolRepository toolRepository;
+    private final IRegisterRepository registerRepository;
+
+    public WorkShopService(IToolRepository toolRepository, IRegisterRepository registerRepository){
+        this.toolRepository = toolRepository;
+        this.registerRepository = registerRepository;
+    }
+
+    public void initWorkShop(){
+        boolean exits = false;
+
+        while(!exits){
+
+            System.out.println("////////////////////////////////////");
+            System.out.println("////////- INPUT OPTIONS - //////////");
+            System.out.println("////////////////////////////////////");
+            System.out.println("   Option #1: Ingreso al taller");
+            System.out.println("   Option #2: Salida taller");
+            System.out.println("   Option #3: Consultar inventario");
+            System.out.println("   Option #4: Salir menu");
+            System.out.println("////////////////////////////////////");
+
+
+            Scanner sn = new Scanner(System.in);
+            System.out.print("Entry a option: ");
+            int option = sn.nextInt();
+
+            switch (option){
+                case 1:
+                    arriveWorkShop();
+                    break;
+                case 2:
+                    finishRepair();
+                    break;
+                case 3:
+                    merchantOrder();
+                    break;
+                case 4:
+                    exits = true;
+                    break;
+                default:
+                    System.out.println("No escogiste ninguna opción de (1-4).");
+                    break;
+
+            }
+
+        }
+    }
+    private void arriveWorkShop(){
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Entry the registerID: ");
+        Integer registerID = scanner.nextInt();
+
+        System.out.print("Entry the operatorName: ");
+        String operatorName = scanner.next();
+
+        System.out.print("Entry the userName: ");
+        String userName = scanner.next();
+
+        System.out.print("Entry the licencePlate: ");
+        String licencePlate = scanner.next();
+
+        System.out.print("Entry the input observations: ");
+        String inputObservations = scanner.next();
+
+        //*Create register*/
+        Operator operator = new Operator(operatorName);
+        Moto moto = new Moto(licencePlate);
+        User user = new User(userName, moto);
+        Observation observation = new Observation(inputObservations);
+        Register register = new Register(registerID,operator,user,observation);
+        registerRepository.save(register);
+    }
+    private void finishRepair(){
+        Scanner sn = new Scanner(System.in);
+
+        System.out.print("Input the registerID: ");
+        Integer registerID = sn.nextInt();
+
+        System.out.print("Entry the output observations: ");
+        String outputObservations = sn.next();
+
+        Register register = registerRepository.getByID(registerID);
+        if (register != null){
+            register.getObservation().SetOutputObservations(outputObservations);
+        }
+
+        System.out.println(register);
+    }
+    private void merchantOrder(){
+        Scanner sn = new Scanner(System.in);
+        List<Tool> tools = new java.util.ArrayList<>();
+
+        System.out.print("Entry the registerID: ");
+        Integer registerID = sn.nextInt();
+
+        System.out.print("Entry size tools: ");
+        int sizeTools = sn.nextInt();
+
+        for (int i = 0; i < sizeTools; i++){
+            System.out.print("Entry ref#"+i+": ");
+            String refID = sn.next();
+            Tool tool = toolRepository.getByRefID(refID);
+            if (tool != null){
+                tools.add(tool);
+            }else {
+                System.out.print("No fond this tool");
+            }
+        }
+
+        int totalAmount = tools.stream().mapToInt(Tool::getPrice).sum();
+        Inventory inventory = new Inventory(tools, totalAmount);
+        Register register = registerRepository.getByID(registerID);
+        register.setInventory(inventory);
+        System.out.println(register);
+    }
+}
+
+
+                
+             </code>
+         </pre>
+
+         <h3>Entidades</h3>
+       
+
+         <pre>
+             <code>
+                package entity;
+
+                import java.util.List;
+                
+                public class Inventory {
+                    private List<Tool> tools;
+                    private int totalAmount;
+                
+                    public Inventory(List<Tool> tools, int totalAmount){
+                        this.tools = tools;
+                        this.totalAmount = totalAmount;
+                    }
+                
+                    @Override
+                    public String toString() {
+                        return "Inventory{" +
+                                "tools=" + tools +
+                                ", totalAmount=" + totalAmount +
+                                '}';
+                    }
+                }
+
+
+
+package entity;
+
+public class Moto{
+    String licencePlate;
+
+    public Moto(String licencePlate){
+        this.licencePlate = licencePlate;
+    }
+
+    @Override
+    public String toString() {
+        return "Moto{" +
+                "licencePlate='" + licencePlate + '\'' +
+                '}';
+    }
+}
+
+package entity;
+
+public class Observation {
+    private String inputObservations;
+    private String outputObservations;
+
+    public void SetOutputObservations(String outputObservations){
+        this.outputObservations = outputObservations;
+    }
+    public Observation(String inputObservations){
+        this.inputObservations = inputObservations;
+    }
+
+    @Override
+    public String toString() {
+        return "Observation{" +
+                "inputObservations='" + inputObservations + '\'' +
+                ", outputObservations='" + outputObservations + '\'' +
+                '}';
+    }
+}
+
+package entity;
+
+public class Operator{
+    private String name;
+
+    public Operator(String name){
+        this.name = name;
+    }
+
+    public String GetName(){
+        return this.name;
+    }
+
+    @Override
+    public String toString() {
+        return "Operator{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+}
+package entity;
+
+
+
+public class Register {
+    private Integer registerID;
+    private Operator operator;
+    private User user;
+    private Observation observation;
+
+    private Inventory inventory;
+
+    public Integer getRegisterID() {
+        return registerID;
+    }
+
+    public Observation getObservation(){
+        return this.observation;
+    }
+
+    public void setInventory(Inventory inventory) {
+        this.inventory = inventory;
+    }
+
+    public Register(Integer registerID, Operator operator, User user, Observation observation){
+        this.registerID = registerID;
+        this.operator = operator;
+        this.user = user;
+        this.observation = observation;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Register{" +
+                "registerID=" + registerID +
+                ", operator=" + operator +
+                ", user=" + user +
+                ", observation=" + observation +
+                ", inventory=" + inventory +
+                '}';
+    }
+}
+package entity;
+
+public class Tool {
+    private  String refID;
+    private String toolDescription;
+    private Integer price;
+
+    public Integer getPrice() {
+        return price;
+    }
+
+    public Tool(String refID, String toolDescription, Integer price){
+        this.refID = refID;
+        this.toolDescription = toolDescription;
+        this.price = price;
+    }
+
+    @Override
+    public String toString() {
+        return "Tool{" +
+                "refID='" + refID + '\'' +
+                ", toolDescription='" + toolDescription + '\'' +
+                ", price=" + price +
+                '}';
+    }
+}
+
+package entity;
+
+public class User{
+    private String name;
+    private Moto moto;
+
+    public User(String name, Moto moto){
+        this.name = name;
+        this.moto = moto;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", moto=" + moto +
+                '}';
+    }
+}
+
+
+
+
+               
+            </code>
+        </pre>
+        
+        <h3>Repositorio</h3>
+       
+
+        <pre>
+            <code>
+                package repository;
+
+                import entity.Register;
+ 
+                   public interface IRegisterRepository {
+                    void save(Register register);
+                    Register getByID(Integer id);
+                                   }
+
+
+                                   package repository;
+
+                                   import entity.Register;
+                                   
+                                   import java.util.Map;
+                                   
+                                   public class RegisterRepository implements IRegisterRepository {
+                                       Map<Integer, Register> registersDB = new java.util.HashMap<>();
+                                   
+                                       @Override
+                                       public void save(Register register) {
+                                           registersDB.put(register.getRegisterID(), register);
+                                       }
+                                   
+                                       @Override
+                                       public Register getByID(Integer id) {
+                                           return registersDB.get(id);
+                                       }
+                                   }
+
+                                   package repository;
+
+                                   import entity.Tool;
+                                   
+                                   public interface IToolRepository {
+                                       Tool getByRefID(String refID);
+                                   }
+
+                                   package repository;
+
+import entity.Tool;
+
+import java.util.Map;
+
+public class ToolRepository implements IToolRepository {
+    Map<String, Tool> toolsDB = Map.of(
+            "01", new Tool("01", "BUJIA", 20000),
+            "02", new Tool("02", "FILTRO MOTOR", 25000),
+            "03", new Tool("03", "CARBURADOR", 100000)
+    );
+
+    @Override
+    public Tool getByRefID(String refID) {
+        return toolsDB.get(refID);
+    }
+
+}
+
+                                   
+                                
+              
+           </code>
+       </pre>
+       
+        <h3>Main</h3>
+         <pre>
+              <code>
+                public class Main {
+                    public static void main(String[] args){
+                        App app = new App();
+                        app.initialApplication();
+                    }
+                }
+                
+
+              </code>
+        </pre>
+
+
+
+        <h2>Punto 7</h2>
+           
+        <h3>Clases</h3>
+       
+        
+
+          <pre>
+              <code>
+                public class CalcularImc {
+
+                    public Double calcularIMC(Persona persona) {
+                        return persona.getPeso() / (persona.getEstatura() * persona.getEstatura());
+                    }
+                
+                
+                }
+
+                import java.util.Scanner;
+
+public class IMCApp {
+
+    private CalcularImc calcularImc = new CalcularImc();
+
+    public void initialApp(){
+           
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("ingrese su nombre completo :");
+        String nombre = scanner.nextLine();
+        System.out.println("ingrese su estatura  en metros:");
+        Double estatura = scanner.nextDouble();
+        System.out.println("ingrese su peso en Kg :");
+        Double peso = scanner.nextDouble();
+        System.out.println("ingrese su edad :");
+        int edad = scanner.nextInt();
+        Persona persona = new Persona(nombre, edad, estatura, peso);
+
+
+
+        Double imc = calcularImc.calcularIMC(persona);
+
+        getIMCType(imc);
+    }
+
+   private void getIMCType(Double imc) {
+
+        if(imc < 18.5){
+            System.out.println("rango de peso insuficiente: " + imc);
+        }
+        else if (imc >= 18.5 && imc <= 24.9){
+            System.out.println("se encuentra dentro del rango de peso normal o saludable: " + imc);
+        }else if (imc >= 25 && imc <= 29.9){
+            System.out.println("se encuentra dentro del rango de sobrepeso " + imc);
+        }else {
+
+            System.out.println("superior, se encuentra dentro del rango de obesidad." + imc);
+        }
+
+      }
+}
+
+
+import java.util.Scanner;
+
+public class Persona {
+
+    private String nombre;
+
+    private int edad;
+    private Double estatura;
+    private Double peso;
+
+    private  Double imc;
+
+
+    public Persona(Double estatura, Double peso, Double imc) {
+        this.estatura = estatura;
+        this.peso = peso;
+        this.imc = imc;
+    }
+
+    public Persona(String nombre, int edad, Double estatura, Double peso) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.estatura = estatura;
+        this.peso = peso;
+
+    }
+
+
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public double getEstatura() {
+        return estatura;
+    }
+
+    public void setEstatura(double estatura) {
+        this.estatura = estatura;
+    }
+
+    public double getPeso() {
+        return peso;
+    }
+
+    public void setPeso(double peso) {
+        this.peso = peso;
+    }
+
+}
+       
+                
+             </code>
+         </pre>
+
+        
+         
+        <h3>Main</h3>
+         <pre>
+              <code>
+                public class Main {
+                    public static void main(String[] args) {
+                        IMCApp imcApp = new IMCApp();
+                        imcApp.initialApp();
+                
+                    }
+                }
+
+              </code>
+        </pre>
+
+
+
+        <h2>Punto 8</h2>
+           
+        <h3>Clases</h3>
+       
+
+          <pre>
+              <code>
+               
+                import repository.CakeRepository;
+import repository.RegisterRepository;
+import service.CakeShopService;
+
+public class App {
+    public void initialApplication(){
+
+        RegisterRepository registerRepository = new RegisterRepository();
+        CakeRepository cakeRepository = new CakeRepository();
+
+
+        CakeShopService cakeShopService = new CakeShopService(registerRepository,cakeRepository);
+
+        cakeShopService.initCakeShopService();
+    }
+}
+
+                
+             </code>
+         </pre>
+
+         <h3>Servicio</h3>
+       
+           
+          <pre>
+              <code>
+                package service;
+
+import entity.*;
+
+import repository.CakeRepository;
+import repository.ICakeRepository;
+import repository.IRegisterRepository;
+
+import java.util.List;
+import java.util.Map;
+import java.util.Scanner;
+
+public class CakeShopService {
+
+    private final IRegisterRepository registerRepository;
+    private final ICakeRepository cakeRepository;
+
+    public CakeShopService(IRegisterRepository registerRepository, ICakeRepository cakeRepository) {
+        this.registerRepository = registerRepository;
+        this.cakeRepository = cakeRepository;
+    }
+
+    public void initCakeShopService() {
+        boolean exits = false;
+
+        while (!exits) {
+
+            System.out.println("////////////////////////////////////");
+            System.out.println("////////- INPUT OPTIONS - //////////");
+            System.out.println("////////////////////////////////////");
+            System.out.println("   Option #1: registrar pedidos");
+            System.out.println("   Option #2: tortas disponibles");
+            System.out.println("   Option #3: ventas diarias");
+            System.out.println("   Option #4: Salir del menu");
+            System.out.println("////////////////////////////////////");
+
+            Scanner sn = new Scanner(System.in);
+            System.out.print("Entry a option: ");
+            int option = sn.nextInt();
+
+            switch (option) {
+                case 1:
+
+                    registerOrder();
+                    break;
+                case 2:
+
+                    cakeAvailable();
+                    break;
+                case 3:
+                    dailySales();
+                    break;
+                case 4:
+                    exits = true;
+                    break;
+                default:
+                    System.out.println("No escogiste ninguna opción de (1-4).");
+                    break;
+
+            }
+
+        }
+    }
+
+
+    private void registerOrder() {
+
+        Scanner scanner1 = new Scanner(System.in);
+
+        System.out.print("ingresar ID para registro: ");
+        Integer registerID = scanner1.nextInt();
+
+
+        System.out.print("ingrese el nombre del operador: ");
+        String operador = scanner1.next();
+
+        System.out.print("ingrese nombre de usuario: ");
+        String userName = scanner1.next();
+
+        System.out.print("ingresar decoracion de la torta : ");
+        String oputtDecor = scanner1.next();
+
+
+        Operator operator = new Operator(operador);
+
+        User user = new User(userName);
+        Decor decor = new Decor(oputtDecor);
+
+
+        Register register = new Register(registerID, operator, user, decor);
+        if (register != null) {
+            register.getDecor().setOputtDecor(oputtDecor);
+            registerRepository.save(register);
+        } else {
+            System.out.println("Datos incorrectos");
+
+        }
+
+
+        System.out.println(register);
+
+
+    }
+
+    private void cakeAvailable() {
+
+        CakeRepository cakeRepository = new CakeRepository();
+        System.out.println("Cake Available");
+        System.out.println(cakeRepository.getByRefID("01"));
+        System.out.println(cakeRepository.getByRefID("02"));
+        System.out.println(cakeRepository.getByRefID("03"));
+        System.out.println(cakeRepository.getByRefID("04"));
+        System.out.println(cakeRepository.getByRefID("05"));
+        System.out.println(cakeRepository.getByRefID("06"));
+
+
+        Scanner sn = new Scanner(System.in);
+        List<Cake> cakes = new java.util.ArrayList<>();
+
+        System.out.print("Entry the registerID: ");
+        Integer registerID = sn.nextInt();
+
+        System.out.print("number of cakes: ");
+        int sizeTools = sn.nextInt();
+
+        for (int i = 0; i < sizeTools; i++) {
+            System.out.print("Entry ref# Coke" + i + ": ");
+            String refID = sn.next();
+            Cake cake = cakeRepository.getByRefID(refID);
+            if (cake != null) {
+                cakes.add(cake);
+            } else {
+                System.out.print("torta no disponible");
+            }
+        }
+
+        int totalAmount = cakes.stream().mapToInt(Cake::getPrice).sum();
+        Sales sales = new Sales(cakes, totalAmount);
+        Register register = registerRepository.getByID(registerID);
+
+        if (register != null) {
+            register.setSales(sales);
+            System.out.println(register);
+        } else {
+            System.out.println("Usuario no esta registrado ");
+        }
+
+    }
+
+
+    private void dailySales() {
+
+        Scanner sn = new Scanner(System.in);
+        List<Cake> cakes = new java.util.ArrayList<>();
+        System.out.println("ingrese ID de venta que desea verificar");
+        System.out.print("Entry the registerID: ");
+        Integer registerID = sn.nextInt();
+
+        Register register = registerRepository.getByID(registerID);
+        if (register != null) {
+            System.out.println(register);
+        } else {
+            System.out.println("no se encuentra en la base de datos ");
+
+
+        }
+
+    }
+}
+
+
+
+
+
+                
+             </code>
+         </pre>
+
+         <h3>Entidades</h3>
+       
+
+         <pre>
+             <code>
+                package entity;
+
+                public class Cake {
+                
+                    private  String refID;
+                    private String cakeDescription;
+                    private Integer price;
+                
+                    private Integer portions;
+                
+                
+                    public Cake() {
+                    }
+                
+                    public Cake(String refID, String cakeDescription, Integer price, Integer portions) {
+                        this.refID = refID;
+                        this.cakeDescription = cakeDescription;
+                        this.price = price;
+                        this.portions = portions;
+                    }
+                
+                    public Integer getPrice() {
+                        return price;
+                    }
+                
+                    public String getRefID() {
+                        return refID;
+                    }
+                
+                    @Override
+                    public String toString() {
+                        return "Cake{" +
+                                "refID = '" + refID + '\'' +
+                                ", cakeDescription ='" + cakeDescription + '\'' +
+                                ", price = " + price +
+                                ", portions = " + portions +
+                                '}';
+                    }
+                }
+
+
+                package entity;
+
+public class Decor {
+
+
+    private String oputtDecor;
+
+    public Decor() {
+
+    }
+
+    public Decor(String oputtDecor) {
+        this.oputtDecor = oputtDecor;
+    }
+
+    public void setOputtDecor(String oputtDecor) {
+        this.oputtDecor = oputtDecor;
+    }
+
+    public String getOputtDecor() {
+        return oputtDecor;
+    }
+
+    @Override
+    public String toString() {
+        return "Decor{" +
+                "oputtDecor='" + oputtDecor + '\'' +
+                '}';
+    }
+}
+
+package entity;
+
+public class Operator {
+    private String name;
+
+    public Operator(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Operator{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+}
+
+package entity;
+
+public class Register {
+
+    private Integer registerID;
+
+    private Operator operator;
+
+    private User user ;
+
+    private Decor decor;
+
+    private Sales sales;
+
+    public Register(Integer registerID, Operator operator, User user, Decor decor) {
+        this.registerID = registerID;
+        this.operator = operator;
+        this.user = user;
+        this.decor = decor;
+    }
+
+    public void setRegisterID(Integer registerID) {
+        this.registerID = registerID;
+    }
+
+    package entity;
+
+import java.util.List;
+
+public class Sales {
+    private List<Cake> cakes;
+    private int totalAmount;
+
+
+    public Sales(List<Cake> cakes, int totalAmount) {
+        this.cakes = cakes;
+        this.totalAmount = totalAmount;
+    }
+
+    @Override
+    public String toString() {
+        return "Sales{" +
+                "cakes=" + cakes +
+                ", totalAmount=" + totalAmount +
+                '}';
+    }
+}
+
+
+package entity;
+
+public class User {
+
+    private String name;
+
+
+    public User(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+}
+
+               
+            </code>
+        </pre>
+        
+        <h3>Repositorio</h3>
+       
+
+        <pre>
+            <code>
+                package repository;
+
+                import entity.Cake;
+                
+                import java.util.Map;
+                
+                public class CakeRepository implements ICakeRepository{
+                
+                    Map<String, Cake> cakesDB = Map.of(
+                
+                            "01", new Cake("01"," Torta - Arequipe", 20000,8),
+                            "02", new Cake("02"," Torta - Arequipe",40000,16),
+                            "03", new Cake("03"," Torta - Mora ",25000,8),
+                            "04", new Cake("04"," Torta - Mora ",50000,16),
+                            "05", new Cake("05"," Torta - Tres Leche",100000,8),
+                            "06", new Cake("06"," Torta - Tres Leche",200000,16)
+                    );
+                
+                    @Override
+                    public Cake getByRefID(String refID) {
+                        return cakesDB.get(refID);
+                    }
+                
+                    public Map<String, Cake> getCakesDB() {
+                        return cakesDB;
+                    }
+                
+                
+                }
+
+
+                package repository;
+
+import entity.Cake;
+
+public interface ICakeRepository {
+
+    Cake getByRefID(String refID);
+
+
+}
+
+
+package repository;
+
+import entity.Register;
+
+public interface IRegisterRepository {
+    void save(Register register);
+    Register getByID(Integer id);
+}
+
+
+package repository;
+
+import entity.Register;
+
+import java.util.Map;
+
+public class RegisterRepository implements  IRegisterRepository{
+
+    Map<Integer, Register> registersDB = new java.util.HashMap<>();
+
+    @Override
+    public void save(Register register) {
+        registersDB.put(register.getRegisterID(), register);
+
+    }
+
+    public Map<Integer, Register> getRegistersDB() {
+        return registersDB;
+    }
+
+    @Override
+    public Register getByID(Integer id) {
+        return registersDB.get(id);
+    }
+}
+              
+           </code>
+       </pre>
+       
+        <h3>Main</h3>
+         <pre>
+              <code>
+                public class Main {
+                    public static void main(String[] args) {
+                
+                        App app = new App();
+                        app.initialApplication();
+                
+                    }
+                }
+
+              </code>
+        </pre>
+
+
+        <h2>Punto 9</h2>
+           
+        <h3>Clases</h3>
+       
+
+          <pre>
+              <code>
+                
+                import service.GeometriaService;
+
+public class App {
+
+    void initialApplication(){
+
+        GeometriaService geometriaService = new GeometriaService();
+        geometriaService.initGeometriaService();
+
+
+
+    }
+}
+
+             </code>
+         </pre>
+
+         <h3>Servicio</h3>
+       
+
+          <pre>
+              <code>
+                package service;
+
+import entity.Calcular;
+import entity.Rectángulo;
+import entity.Trapecio;
+import entity.Triangulo;
+
+import java.util.Scanner;
+
+public class GeometriaService {
+
+
+    public void initGeometriaService(){
+        boolean exits = false;
+
+        while(!exits){
+
+            System.out.println("////////////////////////////////////");
+            System.out.println("////////- INPUT OPTIONS - //////////");
+            System.out.println("////////////////////////////////////");
+            System.out.println("   Option #1: Para Calcular El Area De Un Triángulo");
+            System.out.println("   Option #2: Para Calcular El Area De Un Rectángulo");
+            System.out.println("   Option #3: Para Calcular El Area De Un Trapecio");
+            System.out.println("   Option #4: Salir menu");
+            System.out.println("////////////////////////////////////");
+
+
+            Scanner sn = new Scanner(System.in);
+            System.out.print("Entry a option: ");
+            int option = sn.nextInt();
+
+            switch (option){
+                case 1:
+                   calcularAreaTriangulo();
+                    break;
+                case 2:
+                    calcularAreaRectangulo();
+                    break;
+                case 3:
+                    calcularAreaTrapecio();
+                    break;
+                case 4:
+                    exits = true;
+                    break;
+                default:
+
+            }
+
+        }
+    }
+
+    
+                
+             </code>
+         </pre>
+
+         <h3>Entidades</h3>
+
+         
+       
+
+         <pre>
+             <code>
+                private void calcularAreaTriangulo(){
+
+                    double resultado ;
+                    double base ;
+                    double altura;
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("ingrese la base del triangulo:");
+                    base = scanner.nextDouble();
+                    System.out.print("ingrese la altura del triangulo:");
+                    altura = scanner.nextDouble();
+                    resultado = (base*altura)/2;
+            
+                    Triangulo triangulo = new Triangulo(resultado,base,altura);
+            
+                    Calcular calcular = new Calcular(triangulo);
+                    System.out.print("Area del triangulo = " + resultado);
+                    System.out.println("");
+            
+                }
+                private void calcularAreaRectangulo(){
+                    double resultado ;
+                    double ancho ;
+                    double lado;
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("ingrese el ancho del rectangulo:");
+                    ancho = scanner.nextDouble();
+                    System.out.print("ingrese el lado del rectangulo:");
+                    lado = scanner.nextDouble();
+                    resultado = (lado*ancho);
+            
+                    Rectángulo rectángulo = new Rectángulo(resultado,ancho,lado);
+            
+                    Calcular calcular = new Calcular(rectángulo);
+                    System.out.print("Area del rectangulo = " + resultado);
+                    System.out.println("");
+            
+                }
+                private void calcularAreaTrapecio(){
+            
+                    double resultado ;
+                    double base ;
+                    double altura;
+                    Scanner scanner = new Scanner(System.in);
+                    System.out.print("ingrese la base trapecio :");
+                    base = scanner.nextDouble();
+                    System.out.print("ingrese la altura del trapecio:");
+                    altura = scanner.nextDouble();
+                    resultado = (base + altura)*(altura)/2;
+            
+                    Trapecio trapecio = new Trapecio(resultado,base,altura);
+            
+                    Calcular calcular = new Calcular(trapecio);
+            
+                    System.out.print("Area del trapecio = " + resultado);
+            
+            
+            
+                }
+            }
+            package entity;
+            
+            public class Rectángulo {
+                private Double lado;
+                private  Double ancho;
+                private  Double resultado;
+            
+                public Rectángulo(Double lado, Double ancho, Double resultado) {
+                    this.lado = lado;
+                    this.ancho = ancho;
+                    this.resultado = resultado;
+                }
+            }
+            
+            package entity;
+            
+            public class Trapecio {
+                 private Double base;
+                 private Double altura;
+                 private Double resultado;
+            
+                 public Trapecio(Double base, Double altura, Double resultado) {
+                      this.base = base;
+                      this.altura = altura;
+                      this.resultado = resultado;
+                 }
+            }
+            
+            package entity;
+            
+            public class Triangulo {
+                private Double base;
+                private Double altura;
+                private Double respuesta;
+            
+                public Triangulo(Double base, Double altura, Double respuesta) {
+                    this.base = base;
+                    this.altura = altura;
+                    this.respuesta = respuesta;
+                }
+            
+                @Override
+                public String toString() {
+                    return "Triangulo{" +
+                            "base=" + base +
+                            ", altura=" + altura +
+                            ", respuesta=" + respuesta +
+                            '}';
+                }
+            }
+            
+            
+            
+            
+               
+            </code>
+        </pre>
+        
+    
+       
+        <h3>Main</h3>
+         <pre>
+              <code>
+             
+                public class Main {
+                    public static void main(String[] args) {
+                        App app = new App();
+                        app.initialApplication();
+                    }
+                }
+              </code>
+        </pre>
+
+
+
+
+        <h2>Punto 10</h2>
+           
+        <h3>Clases</h3>
+       
+
+          <pre>
+              <code>
+
+                import repository.UserRepository;
+import service.BancoFielService;
+
+public class App {
+
+    void initialApplication(){
+        UserRepository userRepository = new UserRepository();
+        BancoFielService bancoFielService = new BancoFielService(userRepository);
+        bancoFielService.initBancoFielService();
+
+    }
+}
+
+                
+             </code>
+         </pre>
+
+         <h3>Servicio</h3>
+       
+
+          <pre>
+              <code>
+                package service;
+
+import entity.User;
+import repository.IuserRepository;
+import repository.UserRepository;
+
+import java.util.Scanner;
+
+
+
+public class BancoFielService {
+
+
+   private final IuserRepository userRepository;
+
+    public BancoFielService(IuserRepository userRepository) {
+        this.userRepository = userRepository;
+    }
+
+    String usuario;
+    public void initBancoFielService () {
+        boolean exits = false;
+
+        while (!exits) {
+
+
+            Scanner sn = new Scanner(System.in);
+            System.out.print("ingrese su usuario: ");
+            usuario = sn.next();
+            System.out.print("ingrese su clave: ");
+            String clave = sn.next();
+
+
+            User user = userRepository.getByRefID(usuario);
+
+
+            if (user != null) {
+
+                if (user.equals(userRepository.getByRefID(usuario)) && user.getClave().equals(clave)) {
+
+                    System.out.println("Bienvenido Serñor(a) " + user.getNombreUsuario() + " Numero de cuenta " + user.getNumeroCuenta() + " a su Banco Fiel ");
+
+                    System.out.println("////////////////////////////////////");
+                    System.out.println("////////- INPUT OPTIONS - //////////");
+                    System.out.println("////////////////////////////////////");
+                    System.out.println("   Option #1: Para Realizar Ingresos");
+                    System.out.println("   Option #2: Para Hacer Retiros");
+                    System.out.println("   Option #3: consultar Saldo");
+                    System.out.println("   Option #4: Salir del menu");
+                    System.out.println("////////////////////////////////////");
+
+
+                    System.out.print("Entry a option: ");
+                    int option = sn.nextInt();
+
+                    switch (option) {
+                        case 1:
+                            realizarIngresos ();
+                            break;
+                        case 2:
+                            realizarRetiro ();
+                            break;
+                        case 3:
+                            consultarValor();
+                            break;
+                        case 4:
+                            exits = true;
+                            break;
+                        default:
+                            System.out.println("No escogiste ninguna opción de (1-4).");
+                            break;
+
+                    }
+
+                } else {
+                    System.out.println("Usuario no se encuentra registrado");
+                }
+
+            } else {
+                System.out.println("Usuario no se encuentra registrado");
+            }
+
+
+
+        }
+    }
+    private void realizarIngresos () {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Cuanto desea ingresar : ");
+        int ingreso = scanner.nextInt();
+        User user = userRepository.getByRefID(usuario);
+        if(ingreso >0) {
+            int totalIngreso = user.getSaldo();
+            user.setSaldo(totalIngreso + ingreso);
+            System.out.println("Usuario : " + user.getNombreUsuario() + " --> " + " Numero de Cuenta : " + user.getNumeroCuenta() + " --> " + "  Saldo Actual : " + user.getSaldo());
+        }else {
+            System.out.println("Ingresos deben de ser mayor a cero");
+        }
+    }
+
+
+
+    private void realizarRetiro () {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Cuanto desea retirar : ");
+        int retiro = scanner.nextInt();
+        User user = userRepository.getByRefID(usuario);
+        if (user.getSaldo() > retiro) {
+            int totalRetirar = user.getSaldo();
+            user.setSaldo(totalRetirar - retiro);
+            System.out.println("Usuario : " + user.getNombreUsuario() + " --> " + " Numero de Cuenta : " + user.getNumeroCuenta() + " --> " + "  Saldo Actual : " + user.getSaldo());
+        }else {
+
+            System.out.println("Retiro no debe superar saldo de la cuenta");
+        }
+    }
+    private void  consultarValor() {
+
+        User user = userRepository.getByRefID(usuario);
+        System.out.println("Usuario : " + user.getNombreUsuario() + " --> " + " Numero de Cuenta : " + user.getNumeroCuenta() + " --> " + "  Saldo Actual : " + user.getSaldo());
+
+
+    }
+}
+                
+             </code>
+         </pre>
+
+         <h3>Entidades</h3>
+       
+
+         <pre>
+             <code>
+                package entity;
+
+                import repository.IuserRepository;
+                
+                public class User {
+                
+                
+                    private  String nombreUsuario;
+                    private String numeroCuenta;
+                    private String clave;
+                
+                
+                    private Integer saldo;
+                
+                    public User(String numeroCuenta, String clave, String nombreUsuario, Integer saldo) {
+                        this.numeroCuenta = numeroCuenta;
+                        this.clave = clave;
+                        this.nombreUsuario = nombreUsuario;
+                        this.saldo = saldo;
+                    }
+                
+                    public String getNumeroCuenta() {
+                        return numeroCuenta;
+                    }
+                
+                    public void setNumeroCuenta(String numeroCuenta) {
+                        this.numeroCuenta = numeroCuenta;
+                    }
+                
+                    public String getClave() {
+                        return clave;
+                    }
+                
+                    public void setClave(String clave) {
+                        this.clave = clave;
+                    }
+                
+                    public String getNombreUsuario() {
+                        return nombreUsuario;
+                    }
+                
+                    public void setNombreUsuario(String nombreUsuario) {
+                        this.nombreUsuario = nombreUsuario;
+                    }
+                
+                    public Integer getSaldo() {
+                        return saldo;
+                    }
+                
+                    public void setSaldo(Integer saldo) {
+                        this.saldo = saldo;
+                    }
+                
+                    @Override
+                    public String toString() {
+                        return "User{" +
+                                "numeroCuenta='" + numeroCuenta + '\'' +
+                                ", clave='" + clave + '\'' +
+                                ", nombreUsuario='" + nombreUsuario + '\'' +
+                                ", saldo=" + saldo +
+                                '}';
+                    }
+                }
+            </code>
+        </pre>
+        
+        <h3>Repositorio</h3>
+       
+
+        <pre>
+            <code>
+                package repository;
+
+                import entity.User;
+                
+                import java.util.Map;
+                
+                public class UserRepository implements IuserRepository {
+                
+                    Map<String, User> usersDB = Map.of(
+                            "Hoiver", new User("123-564345-56","1234","Hoiver",100000),
+                            "Duas", new User("495-251621-34","4567","Duas",200000),
+                            "Daniel", new User("103-223444-12","0000","Daniel",300000)
+                    );
+                
+                
+                    public Map<String, User> getUsersDB() {
+                        return usersDB;
+                    }
+                
+                    public void setUsersDB(Map<String, User> usersDB) {
+                        this.usersDB = usersDB;
+                    }
+                
+                    @Override
+                    public User getByRefID(String nombreUsuario) {
+                        return usersDB.get(nombreUsuario);
+                    }
+                
+                
+                
+                
+                }
+               
+
+                package repository;
+
+import entity.User;
+
+import java.util.Arrays;
+
+public interface IuserRepository {
+
+
+    User getByRefID(String nombreUsuario);
+
+
+}
+              
+           </code>
+       </pre>
+       
+        <h3>Main</h3>
+         <pre>
+              <code>
+                import repository.IuserRepository;
+
+                public class Main {
+                    public static void main(String[] args) {
+                
+                        App app = new App();
+                        app.initialApplication();
+                    }
+                }
+
+              </code>
+        </pre>
+
+
+
+        </div>
+    </section>
+
+    
+
+    <!-- SECCION PORTAFOLIO -->
+    <section id="portfolio">
+        <div class="portfolio">
+           
+            <h2> Punto 1</h2>
+           
+            <h3>Clase</h3>
+            <pre>
+		<code>
+            public class App {
+                public void initialApplication(){
+            
+                   PiramideIquierda piramideIquierda = new PiramideIquierda();
+                   piramideIquierda.initPiramide();
+                }
+            }
+            
+            
+            
+            public class PiramideIquierda {
+            
+                public void initPiramide() {
+            
+                    Piramide();
+                }
+                private void Piramide() {
+            
+                    int numFilas = 9;
+                    for (int i = 0; i < numFilas; i++) {
+                        for (int j = 0; j < numFilas; j++) {
+                            System.out.print(" ");
+                        }
+                        for (int k = 0; k <= i; k++) {
+                            System.out.print("*");
+                        }
+                        System.out.println();
+                    }
+                }
+            }
+            
+		</code>
+          </pre>
+       
+
+          <h3>Main</h3>
+          <pre>
+            <code>
+                public class Main {
+                    public static void main(String[] args) {
+                
+                
+                        App app = new App();
+                        app.initialApplication();
+                    }
+                }
+		    </code>
+	     </pre>
+
+
+
+         <h2> Punto 2</h2>
+           
+         <h3>Clase</h3>
+         <pre>
+     <code>
+        public class App {
+
+            public void initialApplication(){
+        
+                PiramideDerecha piramideDerecha = new PiramideDerecha();
+                piramideDerecha.initPiramide();
+            }
+        }
+
+        public class PiramideDerecha {
+
+            public void initPiramide() {
+        
+                Piramide();
+            }
+            private void Piramide() {
+        
+                int numFilas = 10;
+                int i = 0;
+                while (i < numFilas) {
+                    int j = 0;
+                    while (j < numFilas - i) {
+                        System.out.print(" ");
+                        j++;
+                    }
+                    int k = 0;
+                    while (k < i ) {
+                        System.out.print("*");
+                        k++;
+                    }
+                    System.out.println();
+                    i++;
+                }
+        
+        
+        
+        
+        
+        
+            }
+        }
+         
+     </code>
+       </pre>
+
+       <h3>Main</h3>
+       <pre>
+         <code>
+            public class Main {
+                public static void main(String[] args) {
+                    App app = new App();
+                    app.initialApplication();
+                }
+            }
+         </code>
+      </pre>
+
+
+      <h2> Punto 3 </h2>
+           
+      <h3>Clase</h3>
+      <pre>
+  <code>
+    public class App {
+        public void initialApplication(){
+    
+            ArbolNavidad arbolNavidad = new ArbolNavidad();
+            arbolNavidad.initArbolNavidad();
+        }
+    }
+
+    public class ArbolNavidad {
+
+        public void initArbolNavidad() {
+    
+            ArbolNavidad();
+    
+        }
+    
+        private void ArbolNavidad() {
+    
+            int i = 0, j = 0, k = 0;
+    
+            while (i < 10) { // Número de filas
+                j = 0;
+                while (j < (10 - i)) { // Espacios en blanco antes de los asteriscos
+                    System.out.print(" ");
+                    j++;
+                }
+    
+                k = 0;
+                do { // Asteriscos
+                    System.out.print("*");
+                    k++;
+                } while (k < (2 * i + 1)); // Número de asteriscos en cada fila
+    
+                System.out.println();
+                i++;
+            }
+    
+            i = 0;
+    
+            while (i < 2) { // Número de filas de los troncos
+                j = 0;
+                while (j < 9) { // Espacios en blanco antes de los troncos
+                    System.out.print(" ");
+                    j++;
+                }
+    
+                k = 0;
+                do { // Asteriscos que forman el tronco
+                    System.out.print("*");
+                    k++;
+                } while (k < 3);
+    
+                System.out.println();
+                i++;
+            }
+    
+            i = 0;
+    
+            while (i < 1) { // Número de filas de los troncos
+                j = 0;
+                while (j < 8) { // Espacios en blanco antes de los troncos
+                    System.out.print(" ");
+                    j++;
+                }
+    
+    
+                k = 0;
+                do { // Asteriscos que forman el tronco
+                    System.out.print("*");
+                    k++;
+                } while (k < 5);
+    
+                System.out.println();
+                i++;
+            }
+            i = 0;
+    
+            while (i < 1) { // Número de filas de los troncos
+                j = 0;
+                while (j < 7) { // Espacios en blanco antes de los troncos
+                    System.out.print(" ");
+                    j++;
+                }
+    
+    
+                k = 0;
+                do { // Asteriscos que forman el tronco
+                    System.out.print("*");
+                    k++;
+                } while (k < 7);
+    
+                System.out.println();
+                i++;
+            }
+    
+        }
+    }
+  </code>
+    </pre>
+
+ 
+
+    <h3>Main</h3>
+    <pre>
+      <code>
+        public class Main {
+            public static void main(String[] args) {
+                App app = new App();
+                app.initialApplication();
+        
+            }
+        }
+      </code>
+   </pre>
+
+   <h2> Punto 4</h2>
+           
+   <h3>Clase</h3>
+   <pre>
+<code>
+    public class App {
+
+        public void initialApplication(){
+    
+            Tablas tablas = new Tablas();
+            tablas.initTablas();
+        }
+    }
+
+    import java.util.Scanner;
+
+public class Tablas {
+
+    public void initTablas() {
+
+        tablasMultiplicar();
+
+    }
+
+    private void tablasMultiplicar() {
+
+
+        int index = 0;
+
+        Scanner sn = new Scanner(System.in);
+        System.out.print("ingrese el numero de la tabla que desea crear : ");
+        index = sn.nextInt();
+           if(index > 0 && index <= 10) {
+               for (int i = index; i < index + 1; i++) {
+
+                   for (int j = 1; j < 11; j++) {
+
+                       System.out.println(i + "x" + j + " = " + j * i);
+
+
+                   }
+               }
+           }else {
+               System.out.println("Solo se permiten tallas de 1 al 10 ");
+           }
+    }
+}
+   
+</code>
+ </pre>
+
+ <h3>Main</h3>
+ <pre>
+   <code>
+    public class Main {
+        public static void main(String[] args) {
+    
+            App app = new App();
+            app.initialApplication();
+        }
+    }
+   </code>
+</pre>
+
+<h2> Punto 5</h2>
+           
+<h3>Clase</h3>
+<pre>
+<code>
+    public class App {
+
+        public void initialApplication(){
+    
+            Menu menu = new Menu();
+            menu.initMenu();
+        }
+    
+    }
+
+    import java.util.Scanner;
+
+public class Menu {
+    public void initMenu () {
+        boolean exits = false;
+
+        while (!exits) {
+
+            Scanner sn = new Scanner(System.in);
+
+                    System.out.println("////////////////////////////////////");
+                    System.out.println("////////- Menu de Usuario - //////////");
+                    System.out.println("////////////////////////////////////");
+                    System.out.println("   Option #1: Capturar nombre");
+                    System.out.println("   Option #2: Saludar Persona");
+                    System.out.println("   Option #4: Salir del menu");
+                    System.out.println("////////////////////////////////////");
+
+
+                    System.out.print("Ingrese una opcion : ");
+                    int option = sn.nextInt();
+
+                    switch (option) {
+                        case 1:
+                            caturarNombre();
+                            break;
+                        case 2:
+                            saludoPersonal();
+                            break;
+                        case 3:
+                            exits = true;
+                            break;
+                        default:
+                            System.out.println("No escogiste ninguna opción de (1-3).");
+                            break;
+
+                    }
+
+
+
+
+
+
+
+        }
+    }
+    private void caturarNombre(){
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Ingrese su nombre completo: ");
+        String nombre = scanner.nextLine();
+
+        System.out.println("Bienbenido a Sofka  " + nombre);
+
+    }
+    private void saludoPersonal(){
+
+
+        System.out.println("Hola Sofka Gracias por la Grandiosa Oportudidad  ");
+
+    }
+
+}
+
+
+
+</code>
+</pre>
+
+
+
+
+<h3>Main</h3>
+<pre>
+<code>
+    public class Main {
+        public static void main(String[] args) {
+            App app = new App();
+            app.initialApplication();
+        }
+    }
+</code>
+</pre>
+
+
+
+<h2> Punto 6</h2>
+           
+<h3>Clase</h3>
+<pre>
+<code>
+    import repository.RegisterRepository;
+    import service.ContactPhoneService;
+    
+    public class App {
+        void initialApplication(){
+    
+    
+            RegisterRepository registerRepository = new RegisterRepository();
+            ContactPhoneService contactPhoneService = new ContactPhoneService(registerRepository);
+            contactPhoneService.initContactPhoneService();
+    
+        }
+    
+    }
+
+</code>
+</pre>
+
+<h3>Servicio</h3>
+<pre>
+<code>
+    package service;
+
+    import entity.Contact;
+    import entity.Register;
+    import entity.User;
+    import repository.IRegisterRepository;
+    import repository.RegisterRepository;
+    
+    import java.util.Scanner;
+    
+    public class ContactPhoneService {
+    
+        private  final IRegisterRepository registerRepository;
+    
+        public ContactPhoneService(IRegisterRepository registerRepository) {
+            this.registerRepository = registerRepository;
+        }
+    
+        public void initContactPhoneService (){
+    
+            boolean exits = false;
+    
+             while(!exits){
+    
+                System.out.println("////////////////////////////////////");
+                System.out.println("////////- INPUT OPTIONS - //////////");
+                System.out.println("////////////////////////////////////");
+                System.out.println("   Option #1: Register Contact");
+                System.out.println("   Option #2: Search Contact");
+                System.out.println("   Option #3: delete contact");
+                System.out.println("   Option #4: Salir menu");
+                System.out.println("////////////////////////////////////");
+    
+    
+                Scanner sn = new Scanner(System.in);
+                System.out.print("Entry a option: ");
+                int option = sn.nextInt();
+    
+                switch (option){
+                    case 1:
+                        registerContact();
+                        break;
+                    case 2:
+                        searchContact();
+                        break;
+                    case 3:
+                        deleteContact();
+                        break;
+                    case 4:
+                        exits = true;
+                        break;
+                    default:
+                        System.out.println("No escogiste ninguna opción de (1-4).");
+                        break;
+                }
+    
+            }
+        }
+        private void registerContact(){
+    
+            Scanner scanner = new Scanner(System.in);
+    
+            System.out.print("ingrese nombre :");
+            String registerID = scanner.nextLine();
+    
+    
+            System.out.print("ingrese apellidos:");
+            String nameComplete = scanner.nextLine();
+    
+            System.out.print("ingrese numero de telefono:");
+            String number = scanner.next();
+    
+            Contact contact = new Contact(number);
+            User user = new User(nameComplete);
+            Register register = new Register(registerID,user,contact);
+                registerRepository.save(register);
+                System.out.println(register);
+    
+        }
+        private void searchContact(){
+    
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("ingrese nombre que desea buscar:");
+            String registerID = scanner.nextLine();
+            Register register = registerRepository.getByID(registerID);
+    
+                 if (register != null) {
+                     System.out.println(register);
+                 }else {
+                     System.out.println("contacto no se encuentra den la base de datos o fue eliminado");
+                 }
+        }
+        private void deleteContact(){
+    
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("ingrese nombre de contacto que desea eliminar  :");
+            String registerID = scanner.nextLine();
+            Register register = registerRepository.getByID(registerID);
+            registerRepository.remove(register);
+            System.out.println("contacto fue eliminado de la base de datos --> :" + register);
+    
+    
+        }
+    }
+</code>
+</pre>
+
+<h3>Entidades</h3>
+<pre>
+<code>
+    package entity;
+
+public class Contact {
+
+    private String number;
+
+    public Contact(String number) {
+        this.number = number;
+    }
+
+    @Override
+    public String toString() {
+        return "Contact{" +
+                "number=" + number +
+                '}';
+    }
+}
+package entity;
+
+public class Register {
+
+
+    private String registerID;
+    private User user;
+    private Contact contact;
+
+    public Register(String registerID, User user, Contact contact) {
+        this.registerID = registerID;
+        this.user = user;
+        this.contact = contact;
+    }
+
+    public String getRegisterID() {
+        return registerID;
+    }
+
+    @Override
+    public String toString() {
+        return "Register{" +
+                "registerID='" + registerID + '\'' +
+                ", user=" + user +
+                ", contact=" + contact +
+                '}';
+    }
+}
+
+package entity;
+
+public class User {
+
+    private String apellidosComplete;
+
+    public User(String apellidosComplete) {
+        this.apellidosComplete = apellidosComplete;
+    }
+
+    public String getApellidosComplete() {
+        return apellidosComplete;
+    }
+
+    public void setApellidosComplete(String apellidosComplete) {
+        this.apellidosComplete = apellidosComplete;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "apellidosComplete='" + apellidosComplete + '\'' +
+                '}';
+    }
+}
+
+</code>
+</pre>
+
+
+<h3>Repositorio</h3>
+<pre>
+<code>
+    package repository;
+
+import entity.Register;
+
+import java.util.Map;
+
+public class RegisterRepository implements IRegisterRepository {
+
+    int capacidadMaxima = 3;
+    Map<String, Register> registersDB = new java.util.HashMap<>(capacidadMaxima);
+
+    @Override
+    public void save(Register register) {
+
+        if (registersDB.size() < capacidadMaxima) {
+
+
+            if (registersDB.containsKey(register.getRegisterID())) {
+
+                System.out.println("El registro con las siguientes caracteristicas  ya existe en la base de datos");
+                System.out.println(register.getRegisterID());
+
+            } else {
+
+                registersDB.put(register.getRegisterID(), register);
+            }
+
+        } else {
+            System.out.println("Error: se ha excedido la capacidad maxima de la base de dato.");
+            System.out.println("El usuario con  las siguientes caracteristicas no fue guardado.");
+        }
+
+    }
+
+
+    public void remove(Register register) {
+        registersDB.remove(register.getRegisterID(), register);
+    }
+
+    @Override
+    public Register getByID(String id) {
+        return registersDB.get(id);
+    }
+
+
+}
+
+package repository;
+
+import entity.Register;
+
+public interface IRegisterRepository {
+    void save(Register register);
+
+    Register getByID(String id);
+
+    void remove(Register register);
+
+
+
+}
+
+</code>
+</pre>
+
+
+<h3>Main</h3>
+<pre>
+<code>
+    public class Main {
+        public static void main(String[] args) {
+                   App app = new App();
+                   app.initialApplication();
+        }
+    }
+</code>
+</pre>
+
+
+<h2> Punto 7</h2>
+           
+<h3>Clase</h3>
+<pre>
+<code>
+    import repository.RegisterRepository;
+    import service.ParkingGuardianService;
+    
+    public class App {
+        void initialApplication(){
+    
+    
+            RegisterRepository registerRepository = new RegisterRepository();
+            ParkingGuardianService parkingGuardianService = new ParkingGuardianService(registerRepository);
+            parkingGuardianService.initParkingGuardianService();
+        }
+    }
+    
+
+</code>
+</pre>
+
+<h3>Servicio</h3>
+<pre>
+<code>
+    package service;
+
+    import entity.*;
+    import repository.IRegisterRepository;
+    
+    import java.util.Scanner;
+    
+    public class ParkingGuardianService {
+    
+        private final IRegisterRepository registerRepository;
+        private Integer admissionTime;
+    
+        public ParkingGuardianService(IRegisterRepository registerRepository) {
+            this.registerRepository = registerRepository;
+        }
+    
+        public void initParkingGuardianService() {
+    
+            boolean exits = false;
+    
+            while (!exits) {
+    
+                System.out.println("////////////////////////////////////");
+                System.out.println("////////- INPUT OPTIONS - //////////");
+                System.out.println("////////////////////////////////////");
+                System.out.println(" Option #1: Entered the parking lot");
+                System.out.println(" Option #2: remove from the parking lot");
+                System.out.println(" Option #3: consult vehicle ");
+                System.out.println(" Option #4: Salir menu");
+                System.out.println("////////////////////////////////////");
+    
+    
+                Scanner sn = new Scanner(System.in);
+                System.out.print("Entry a option: ");
+                int option = sn.nextInt();
+    
+                switch (option) {
+                    case 1:
+                        enteredParkingLot();
+                        break;
+                    case 2:
+                        removeParking();
+                        break;
+                    case 3:
+                        consultVehicle();
+                        break;
+                    case 4:
+                        exits = true;
+                        break;
+                    default:
+                        System.out.println("No escogiste ninguna opción de (1-4).");
+                        break;
+                }
+    
+            }
+        }
+    
+        private void enteredParkingLot() {
+    
+            Scanner scanner = new Scanner(System.in);
+    
+            System.out.print("ingrese  registerID para ingreso: ");
+            Integer registerID = scanner.nextInt();
+    
+            System.out.print("ingrese nombre completo del usuario : ");
+            scanner.nextLine();
+            String userName = scanner.nextLine();
+    
+    
+            Scanner scanner2 = new Scanner(System.in);
+            System.out.print("numero de telefono del usuario : ");
+            String cellNumber = scanner2.next();
+    
+            System.out.print("ingrese nombre del operario: ");
+            String operatorName = scanner2.next();
+    
+            Scanner scanner1 = new Scanner(System.in);
+    
+            System.out.print("ingrese marca del Vehiculo : ");
+            String brand = scanner1.next();
+    
+            System.out.print("ingrese placa del vehiculo : ");
+            String licencePlate = scanner1.next();
+    
+            System.out.print("hora de entrada: ");
+            Integer entryTime = scanner1.nextInt();
+    
+            Operator operator = new Operator(operatorName);
+            User user = new User(userName, cellNumber);
+            Vehicle vehicle = new Vehicle(brand, licencePlate);
+            Register register = new Register(registerID, operator, user, vehicle);
+            register.setEntryTime(entryTime);
+            registerRepository.save(register);
+            System.out.println(register);
+    
+        }
+    
+    
+        private void removeParking(){
+    
+            Scanner scanner3 = new Scanner(System.in);
+            System.out.print("ingrese registerID para retiro Vehiculo : ");
+            Integer registerID = scanner3.nextInt();
+            System.out.print("hora de salida: ");
+            int departureTime = scanner3.nextInt();
+            Register register = registerRepository.getByID(registerID);
+            register.setDepartureTime(departureTime);
+            int price = (register.getDepartureTime()-register.getEntryTime())*1000;
+            register.setPrice(price);
+            registerRepository.remove(register);
+            System.out.println("Vehiculo  fue retirado del parqueadero --> :" + register);
+    
+        }
+    
+    
+    
+        private void consultVehicle(){
+    
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("ingrese registerID para consultar:");
+            Integer registerID = scanner.nextInt();
+            Register register = registerRepository.getByID(registerID);
+    
+            if (register != null) {
+                System.out.println(register);
+            }else {
+                System.out.println("Vehiculo no se encuentra en la base de datos o fue eliminado");
+            }
+        }
+    }
+</code>
+</pre>
+
+<h3>Entidades</h3>
+<pre>
+<code>
+    package entity;
+
+    public class Operator {
+    
+        private String name;
+    
+        public Operator(String name) {
+            this.name = name;
+        }
+    
+        @Override
+        public String toString() {
+            return "Operador{" +
+                    "name='" + name + '\'' +
+                    '}';
+        }
+    }
+    package entity;
+
+public class Register {
+
+    private Integer registerID;
+    private Operator operador;
+    private User user;
+    private Vehicle vehiculo;
+
+    private int entryTime;
+
+    private int departureTime;
+    private  int price;
+
+
+
+
+
+    public Register(Integer registerID, Operator operador, User user, Vehicle vehiculo) {
+        this.registerID = registerID;
+        this.operador = operador;
+        this.user = user;
+        this.vehiculo = vehiculo;
+    }
+
+
+
+    public Integer getRegisterID() {
+        return registerID;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public void setEntryTime(int entryTime) {
+        this.entryTime = entryTime;
+    }
+
+    public void setDepartureTime(int departureTime) {
+        this.departureTime = departureTime;
+    }
+
+    public void setPrice(int price) {
+        this.price = price;
+    }
+
+    public int getEntryTime() {
+        return entryTime;
+    }
+
+
+
+
+    public int getDepartureTime() {
+        return departureTime;
+    }
+
+    @Override
+    public String toString() {
+        return "Register{" +
+                "registerID=" + registerID +
+                ", operador=" + operador +
+                ", user=" + user +
+                ", vehiculo=" + vehiculo +
+                ", entryTime=" + entryTime +
+                ", departureTime=" + departureTime +
+                ", price=" + price +
+                '}';
+    }
+}
+package entity;
+
+public class User {
+
+    private String fullName;
+    private String phoneNumber;
+
+    public User(String fullName, String phoneNumber) {
+        this.fullName = fullName;
+        this.phoneNumber = phoneNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "fullName='" + fullName + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                '}';
+    }
+}
+
+package entity;
+
+public class Vehicle {
+
+    private String brand;
+    private String licensePlate;
+
+    public Vehicle(String brand, String licensePlate) {
+        this.brand = brand;
+        this.licensePlate = licensePlate;
+    }
+
+    @Override
+    public String toString() {
+        return "Vehicle{" +
+                "brand='" + brand + '\'' +
+                ", licensePlate='" + licensePlate + '\'' +
+                '}';
+    }
+}
+</code>
+</pre>
+
+
+<h3>Repositorio</h3>
+<pre>
+<code>
+    package repository;
+
+import entity.Register;
+
+import java.util.Map;
+
+public class RegisterRepository implements IRegisterRepository {
+
+    int capacidadMaxima = 5;
+    Map<Integer, Register> registersDB = new java.util.HashMap<>(capacidadMaxima);
+
+    @Override
+    public void save(Register register) {
+
+        if (registersDB.size() < capacidadMaxima) {
+
+            registersDB.put(register.getRegisterID(), register);
+        } else {
+            System.out.println("Error: se ha excedido la capacidad maxima de la base de dato.");
+            System.out.println("El usuario con  las siguientes caracteristicas no fue guardado.");
+        }
+    }
+    public void remove(Register register) {
+        registersDB.remove(register.getRegisterID(), register);
+    }
+
+    @Override
+    public Register getByID(Integer id) {
+        return registersDB.get(id);
+    }
+
+}
+package repository;
+
+import entity.Register;
+
+public interface IRegisterRepository {
+    void save(Register register);
+    void remove(Register register);
+    Register getByID(Integer id);
+}
+
+</code>
+</pre>
+
+
+<h3>Main</h3>
+<pre>
+<code>
+    public class Main {
+        public static void main(String[] args) {
+             App app = new App();
+             app.initialApplication();
+    
+        }
+    }
+</code>
+</pre>
+
+
+<h2> Punto 8</h2>
+           
+<h3>Clase</h3>
+             <pre>
+                <code>
+                    import repository.RegisterRepository;
+                    import service.DrivingSchoolService;
+                    
+                    public class App {
+                    
+                        void initialApplication(){
+                    
+                    
+                            RegisterRepository registerRepository = new RegisterRepository();
+                            DrivingSchoolService drivingSchoolService = new DrivingSchoolService(registerRepository);
+                            drivingSchoolService.initDrivingSchoolService();
+                        }
+                    }
+
+              </code>
+           </pre>
+
+
+       <h3>Servicio</h3>
+             <pre>
+                <code>
+                    package service;
+
+                    import entity.Register;
+                    import entity.User;
+                    import repository.IRegisterRepository;
+                    
+                    import java.util.Scanner;
+                    
+                    public class DrivingSchoolService {
+                    
+                        private final IRegisterRepository registerRepository;
+                    
+                        public DrivingSchoolService(IRegisterRepository registerRepository) {
+                            this.registerRepository = registerRepository;
+                        }
+                    
+                        public void initDrivingSchoolService() {
+                    
+                            boolean exits = false;
+                    
+                            while (!exits) {
+                    
+                                System.out.println("////////////////////////////////////");
+                                System.out.println("////////- INPUT OPTIONS - //////////");
+                                System.out.println("////////////////////////////////////");
+                                System.out.println(" Option #1: register user");
+                                System.out.println(" Option #2: note input");
+                                System.out.println(" Option #3: course test results ");
+                                System.out.println(" Option #4: Salir menu");
+                                System.out.println("////////////////////////////////////");
+                    
+                    
+                                Scanner sn = new Scanner(System.in);
+                                System.out.print("Entry a option: ");
+                                int option = sn.nextInt();
+                    
+                                switch (option) {
+                                    case 1:
+                                        registerUser();
+                                        break;
+                                    case 2:
+                                        noteInput();
+                                        break;
+                                    case 3:
+                                        courseTestResults();
+                                        break;
+                                    case 4:
+                                        exits = true;
+                                        break;
+                                    default:
+                                        System.out.println("No escogiste ninguna opción de (1-4).");
+                                        break;
+                                }
+                    
+                            }
+                        }
+                    
+                    
+                    
+                        private void registerUser(){
+                    
+                            Scanner scanner = new Scanner(System.in);
+                    
+                            System.out.print("ingrese nombre completo del usuario : ");
+                            String userName = scanner.nextLine();
+                            System.out.print("ingrese numero de documento: ");
+                            Integer registerID = scanner.nextInt();
+                    
+                            User user = new User(userName);
+                            Register register = new Register(user,registerID);
+                            if (userName!=null || registerID != null) {
+                                registerRepository.save(register);
+                                System.out.println(register);
+                            }else {
+                                System.out.println("datos mal ingresados");
+                            }
+                    
+                        }
+                    
+                        private void noteInput(){
+                            Scanner scanner1 = new Scanner(System.in);
+                            System.out.print("ingrese numero de documento de estudiante : ");
+                            Integer registerID = scanner1.nextInt();
+                            System.out.print("ingresar si estudiante (aprobo o reprobo) : ");
+                            String results = scanner1.next();
+                            Register register = registerRepository.getByID(registerID);
+                            register.setResults(results);
+                            if(register != null) {
+                                registerRepository.save(register);
+                                register.setResults(results);
+                                System.out.println(register);
+                            }else {
+                                System.out.println("error usuario no se encuentra en la base de datos");
+                            }
+                           }
+                          private void courseTestResults() {
+                    
+                              Scanner scanner2 = new Scanner(System.in);
+                              System.out.print("ingrese numero de documento de estudiante : ");
+                              Integer registerID = scanner2.nextInt();
+                              Register register = registerRepository.getByID(registerID);
+                              if (register != null) {
+                                  System.out.println(register);
+                              } else {
+                                  System.out.println("estudiante no ha presentado el curso o no encuentra registrado");
+                              }
+                    
+                          }
+                    }
+
+            </code>
+       </pre>
+
+       <h3>Entidades</h3>
+        <pre>
+           <code>
+            package entity;
+
+            public class Register {
+            
+                private User user;
+                private Integer registerID;
+                private String results;
+            
+                public Register(User user, Integer registerID) {
+                    this.user = user;
+                    this.registerID = registerID;
+                }
+            
+                public Integer getRegisterID() {
+                    return registerID;
+                }
+            
+                public String getResults() {
+                    return results;
+                }
+            
+                public void setResults(String results) {
+                    this.results = results;
+                }
+            
+                @Override
+                public String toString() {
+                    return "Register{" +
+                            "user=" + user +
+                            ", registerID=" + registerID +
+                            ", results='" + results + '\'' +
+                            '}';
+                }
+            }
+
+            package entity;
+
+public class User {
+
+    private String name;
+
+    public User(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+}
+
+         </code>
+      </pre>
+
+
+      <h3>Repositorio</h3>
+        <pre>
+           <code>
+            package repository;
+
+            import entity.Register;
+            
+            import java.util.Map;
+            
+            public class RegisterRepository implements IRegisterRepository {
+            
+                int capacidadMaxima = 8;
+                Map<Integer, Register> registersDB = new java.util.HashMap<>(capacidadMaxima);
+            
+                @Override
+                public void save(Register register) {
+            
+                    if (registersDB.size() < capacidadMaxima) {
+            
+                        registersDB.put(register.getRegisterID(), register);
+                    } else {
+                        System.out.println("Error: se ha excedido la capacidad maxima de la base de dato.");
+                        System.out.println("El usuario con  las siguientes caracteristicas no fue guardado.");
+                    }
+                }
+            
+                @Override
+                public Register getByID(Integer id) {
+                    return registersDB.get(id);
+                }
+            }
+
+            package repository;
+
+import entity.Register;
+
+public interface IRegisterRepository {
+    void save(Register register);
+    Register getByID(Integer id);
+}
+
+
+         </code>
+      </pre>
+
+
+
+<h3>Main</h3>
+<pre>
+<code>
+    public class Main {
+        public static void main(String[] args) {
+    
+            App app = new App();
+            app.initialApplication();
+        }
+    }
+</code>
+</pre>
+        </div>
+        
+    </section>
+     <!-- SECCTION C O N T A C T O -->
+     <section id="contacto">
+        <div class="contacto">
+            <h2>Punto 1</h2>
+            <h3>Clase</h3>
+            <pre>
+            <code>
+                public class App {
+
+                    void initialApplication(){
+                
+                          CrearVectorService crearVectorService = new CrearVectorService();
+                          crearVectorService.initCrearVectorService();
+                    }
+                }
+
+                import java.util.Scanner;
+
+public class CrearVectorService {
+
+    public void initCrearVectorService() {
+
+        int[] num = new int[5];
+
+        Scanner scanner = new Scanner(System.in);
+        for (int i = 0; i <num.length ; i++) {
+
+            System.out.print("ingresar pocision "+i+":");
+            num[i] = scanner.nextInt();
+        }
+
+        for (int i = 0; i < num.length ; i++) {
+
+            System.out.println("["+i+"] = " + num[i]);
+
+        }
+    }
+}
+               
+            </code>
+         </pre>    
+        
+         
+
+        <h3>Main</h3>
+        <pre>
+        <code>
+            public class Main {
+                public static void main(String[] args) {
+            
+                     App app = new App();
+                     app.initialApplication();
+                }
+            }
+        </code>
+        </pre>    
+
+        <h2>Punto 2</h2>
+
+
+        <h3>Clases</h3>
+            <pre>
+                  <code>
+
+                    public class App {
+
+                        void initialApplication(){
+                    
+                           NumeroAleatoriosService numeroAleatoriosService = new NumeroAleatoriosService();
+                           numeroAleatoriosService.initNumeroAleatoriosService();
+                        }
+                    }
+                    
+                    import java.util.Random;
+import java.util.Scanner;
+
+public class NumeroAleatoriosService {
+
+    public void initNumeroAleatoriosService() {
+
+        int[] numeros = new int[20];
+        Random random = new Random();
+        Scanner scanner = new Scanner(System.in);
+        // Llenar el arreglo con números aleatorios entre 1 y 100
+        for (int i = 0; i < numeros.length; i++) {
+            numeros[i] = random.nextInt(100) + 1;
+        }
+
+        // Imprimir los números pares e impares
+        System.out.print("Numeros pares:");
+        for (int i = 0; i < numeros.length; i++) {
+            if (numeros[i] % 2 == 0) {
+                System.out.print("," + numeros[i]);
+            }
+        }
+        System.out.println("");
+        System.out.print("Numeros impares:");
+        for (int i = 0; i < numeros.length; i++) {
+            if (numeros[i] % 2 != 0) {
+                System.out.print("," + numeros[i]);
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+                   </code>
+               </pre>    
+    
+    <h3>Main</h3>
+
+             <pre>
+                <code>
+                    public class Main {
+                        public static void main(String[] args) {
+                            App app = new App();
+                            app.initialApplication();
+                        }
+                    }
+               </code>
+            </pre>    
+
+    <h2>Punto 3</h2>
+
+    <h3>Clases</h3>
+         <pre>
+             <code>
+                public class App {
+
+                    void initialApplication(){
+                
+                        NumeroPrimosService numeroPrimosService = new NumeroPrimosService();
+                        numeroPrimosService.initNumeroPrimosService();
+                    }
+                }
+                import java.util.Random;
+                import java.util.Scanner;
+                
+                public class NumeroPrimosService {
+                
+                    public void initNumeroPrimosService() {
+                
+                        System.out.println("Numeros Primos del 1 al 1000");
+                
+                        for (int i = 2; i <= 1000; i++) {
+                            boolean esPrimo = true;
+                            for (int j = 2; j <= Math.sqrt(i); j++) {
+                                if (i % j == 0) {
+                                    esPrimo = false;
+                                    break;
+                                }
+                            }
+                
+                            if (esPrimo) {
+                
+                                System.out.print("," + i );
+                            }
+                        }
+                
+                
+                    }
+                }                
+             </code>
+         </pre>    
+
+
+         <h3>Main</h3>
+                <pre>
+                  <code>
+                    public class Main {
+                        public static void main(String[] args) {
+                            App app = new App();
+                            app.initialApplication();
+                        }
+                    }
+                   </code>
+                </pre>   
+
+
+           <h2>Punto 4</h2>
+            <h3>Clase</h3>
+                  <pre>
+                    <code>
+                        public class App {
+                            void initialApplication(){
+                        
+                               MatrizBidimensionalService matrizBidimensionalService = new MatrizBidimensionalService();
+                               matrizBidimensionalService.initMatrizBidimensionalService();
+                            }
+                        }
+                        
+                        public class MatrizBidimensionalService {
+
+                            public void initMatrizBidimensionalService() {
+                        
+                        
+                                int[][] matriz = {
+                                        { 1, 2, 3, 4, 5 },
+                                        { 6, 7, 8, 9, 10 },
+                                        { 11, 12, 13, 14, 15 },
+                                        { 16, 17, 18, 19, 20 }
+                                };
+                                System.out.println("Matriz Original");
+                                for (int i = 0; i < 4; i++) {
+                                    for (int j = 0; j < 5; j++) {
+                        
+                                        System.out.print(String.format("%02d ", matriz[i][j]));
+                        
+                                    }
+                                    System.out.println();
+                                }
+                                System.out.println("");
+                                System.out.println("Matriz Modificada");
+                                int[][] nuevaMatriz = new int[4][5];
+                                for (int i = 0; i < 4; i++) {
+                                    for (int j = 0; j < 5; j++) {
+                                        if (i == 1 || i == 3) {
+                                            nuevaMatriz[i][4 - j] = matriz[i][j];
+                                        } else {
+                                            nuevaMatriz[i][j] = matriz[i][j];
+                                        }
+                                    }
+                                }
+                        
+                                for (int i = 0; i < 4; i++) {
+                                    for (int j = 0; j < 5; j++) {
+                                        System.out.print(String.format("%02d ", nuevaMatriz[i][j]));
+                                    }
+                                    System.out.println();
+                                }
+                        
+                        
+                        
+                        
+                            }
+                        }
+                   </code>
+                 </pre>    
+    
+         <h3>Main</h3>
+              <pre>
+                <code>
+                    public class Main {
+                        public static void main(String[] args) {
+                    
+                            App app = new App();
+                            app.initialApplication();
+                        }
+                    }
+              </code>
+            </pre>   
+    
+
+
+
+    <h2>Punto 5</h2>
+        <h3>Clase</h3>
+        <pre>
+        <code>
+            public class App {
+                void initialApplication(){
+            
+                           TablasMultiplicarService tablasMultiplicarService = new TablasMultiplicarService();
+                           tablasMultiplicarService.initTablasMultiplicarService();
+            
+                }
+            
+            }
+            
+            import java.util.Scanner;
+
+public class TablasMultiplicarService {
+
+   void initTablasMultiplicarService(){
+
+      boolean n = true;
+      Scanner scanner = new Scanner(System.in);
+
+      while (n) {
+         System.out.println("-------------------------------------------------------------------------------------------------------");
+         System.out.println("                                                COLUMNA");
+         System.out.println("-------------------------------------------------------------------------------------------------------");
+         System.out.println("        0        1          2         3         4         5         6         7         8         9   ");
+         System.out.println("-------------------------------------------------------------------------------------------------------");
+         tabla("  ",1,10);
+         System.out.println("   -    |0");
+         tabla("  ",2,10);
+         System.out.println("   -    |1");
+         tabla("  ",3,10);
+         System.out.println("   -    |2       -->  F");
+         tabla("  ",4,10);
+         System.out.println("   -    |3       -->  I");
+         tabla("  ",5,10);
+         System.out.println("   -    |4       -->  L");
+         tabla("  ",6,10);
+         System.out.println("   -    |5       -->  A");
+         tabla("  ",7,10);
+         System.out.println("   -    |6       -->  S");
+         tabla("  ",8,10);
+         System.out.println("   -    |7");
+         tabla("  ",9,10);
+         System.out.println("   -    |8");
+         tabla(" ",10,10);
+         System.out.println("   -    |9");
+         System.out.println("");
+         System.out.println("");
+         System.out.println("Bienvenido a la APP de Tablas de Multiplicar");
+         System.out.println("");
+         System.out.print("Ingrese fila:");
+         int p = scanner.nextInt();
+         System.out.print("Ingrese columna:");
+         int q = scanner.nextInt();
+         tablaResultado(p,q);
+
+      }
+   }
+
+
+
+   public static void tabla(String l, int x, int z) {
+      int[][] matriz = new int[100][100];
+
+      for (int k = 1; k <= x; k++) {
+         for (int j = 1; j <= z; j++) {
+            matriz[k][j] = k * j;
+         }
+      }
+
+      for (int k = x; k <= x; k++) {
+         for (int j = 1; j <= z; j++) {
+            System.out.print("     " + l + j + "x" + k);
+         }
+      }
+   }
+
+   public static void tablaResultado(int g, int m) {
+      int[][] matriz = new int[100][100];
+      int k = 1;
+      int j = 1;
+
+      for (k = 1; k <= g + 1; k++) {
+         for (j = 1; j <= m + 1; j++) {
+            matriz[k][j] = (g + 1) * (m + 1);
+         }
+      }
+
+      for (k = 1; k <= 1; k++) {
+         for (j = 1; j <= 1; j++) {
+            System.out.println(g + 1 + "x" + (m+ 1) + "=" + matriz[k][j]);
+         }
+      }
+
+   }
+
+}
+
+        </code>
+        </pre>    
+    </div>
+    <h3>Main</h3>
+    <pre>
+    <code>
+        public class Main {
+            public static void main(String[] args) {
+        
+                App app = new App();
+                app.initialApplication();
+            }
+        }
+    </code>
+    </pre>   
+    </section>
+     <!-- SECCION FOOTER -->
+     <footer>
+        <p>Todos los derechos reservados - 2023</p>
+        <div class="redes">
+            <a href="#"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+            <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
+        </div>
+
+    </footer>
+
+    <script src="../Javascrit/scrip1.js"></script>
+</body>
+
+</html>
+</body>
+</html>
