@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+#frutas li:nth-child(even) {
+    background-color: #e6ffe6;
+}
+
+#frutas li:nth-child(odd) {
+    background-color: #ccffcc;
+}
+
+.tema1 {
+    background-color: #ff9999;
+}
+
+.tema1 #frutas li:nth-child(even) {
+    background-color: #ffe6e6;
+}
+
+.tema1 #frutas li:nth-child(odd) {
+    background-color: #ffcccc;
+}
+
+.tema2 {
+    background-color: #99ccff;
+}
+
+.tema2 #frutas li:nth-child(even) {
+    background-color: #e6f2ff;
+}
+
+.tema2 #frutas li:nth-child(odd) {
+    background-color: #cce6ff;
+}
